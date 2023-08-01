@@ -1,3 +1,4 @@
+
 [x]vdétourge maquette
 
     (x) nommage des éléts
@@ -34,4 +35,5 @@ POUR ALLER PLUS LOIN
         () ::after "retour à l'accueil"
 
     [] Check qui son des boutons radios qui restent affichés au clic
+
 
