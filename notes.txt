@@ -1,9 +1,37 @@
-/*TODO []détourge maquette
+[x]vdétourge maquette
 
-    () nommage des éléts
+    (x) nommage des éléts
 
-[] trouver les icones
+[x] trouver les icones
+
+
+/*TODO */ 
+
+[] ombres élémnets
 
 
 
-*/
+
+
+==============================================================
+POUR ALLER PLUS LOIN
+==================================================================
+
+
+[] homepage 
+    [] champ recherche actif
+    [] boutons howto list cliquables,
+        () survol => "en savoir plus..."
+        () clic => apparition d'une div déroulante avec du texte explicatif
+
+    [] les favoris (coeurs) restent remplis au clic
+        => boutons radios
+
+
+[] Pages restaurants
+    [] deuxième flèche de navigation pour restau suivant
+    [] logo qui pointe sur homepage
+        () ::after "retour à l'accueil"
+
+    [] Check qui son des boutons radios qui restent affichés au clic
+
