@@ -14,7 +14,7 @@
     width:100%;
     height:100%; 
     background-color: rgba(255,255,255,0);
-    animation: fadingRestaurantAnim 1s ease-out; 
+    animation: fadingRestaurantAnim .5s ease-out; 
     animation-fill-mode: backwards; 
     animation-iteration-count: 1;
 }
@@ -140,19 +140,19 @@ h1{
 /**fadding plats */
 
 article:nth-child(1){
-    animation: articlesAnim  3s ;
+    animation: articlesAnim  .3s ;
     animation-fill-mode: backwards;
 }
 article:nth-child(2){
-    animation: articlesAnim  3s 2s ;
+    animation: articlesAnim  .3s .2s ;
     animation-fill-mode: backwards;
 }
 article:nth-child(3){
-    animation: articlesAnim 1s 3s;
+    animation: articlesAnim .1s .3s;
     animation-fill-mode: backwards;
 }
 article:nth-child(4){
-    animation: articlesAnim .5s 3.5s;
+    animation: articlesAnim .05s .35s;
     animation-fill-mode: backwards;
 }
 
@@ -194,18 +194,31 @@ article:nth-child(4){
     gap: 20px;
 }
 
-.customCheck{
-    
-    position: relative;
-    border-style: none;
-    box-shadow: 0px 0px 10px 0px  rgba(236, 234, 234, 0.356);
-    border-radius: 15px;
-    background-color: white;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    overflow: hidden;
-}
+    /* .customCheck{
+        
+        position: relative;
+        border-style: none;
+        box-shadow: 0px 0px 10px 0px  rgba(236, 234, 234, 0.356);
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        overflow: hidden;
+    } */
+
+/* ! */
+    .dishCard{
+        position: relative;
+        border-style: none;
+        box-shadow: 0px 0px 10px 0px  rgba(236, 234, 234, 0.356);
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        overflow: hidden;
+    }
 
 .dishDescription{
     width: calc(100% - 55px);
@@ -222,11 +235,16 @@ article:nth-child(4){
     padding: 10px  0 10px 10px;   
 }
 
-.customCheck:hover .dishDescription {
+/* .customCheck:hover .dishDescription {
     animation: textReduction 0.5s linear ;
     animation-fill-mode:forwards;
+} */
 
+.dishCard:hover .dishDescription {
+    animation: textReduction 0.3s linear ;
+    animation-fill-mode:forwards;
 }
+
 
 @keyframes textReduction {
     from{
@@ -239,7 +257,7 @@ article:nth-child(4){
  
 
 .dishCard:hover .dishPriceAndCheckBtn{
-    animation: priceAndCheckBtnTranslate 0.6s .1s linear;
+    animation: priceAndCheckBtnTranslate 0.3s .05s linear;
     animation-fill-mode:forwards;
 }
 
@@ -248,7 +266,7 @@ article:nth-child(4){
     100%{ transform: translateX(-65px); }
 }
 
-.dishCard:hover .dishPriceAndCheckBtn .checkButton .fa-check{
+/* .dishCard:hover .dishPriceAndCheckBtn .checkButton .fa-check{
     animation: faCheckWarning  linear 2s 1;
     animation-fill-mode:forwards;
 }
@@ -269,7 +287,7 @@ article:nth-child(4){
     100%{
         opacity: 0;
     }
-}
+} */
 
 
 .dishName{
@@ -320,9 +338,9 @@ article:nth-child(4){
     transform: translate(-50%, -50%);
 }
 
-.fa-circle-check, .fa-circle{
+/* .fa-circle-check, .fa-circle{
     color: white;
-}
+} */
 
 
 /** mobile: clics sur check  **/
@@ -345,7 +363,7 @@ article:nth-child(4){
     color:var(--tertiary-color)
 }
 
-
+/* 
     .customCheck input {
         display: none;
     }
@@ -367,7 +385,7 @@ article:nth-child(4){
 
     .customCheck input:checked ~ .dishPriceAndCheckBtn .checkButton .fa-check {
         animation: none;
-    }
+    } */
 
 
 
