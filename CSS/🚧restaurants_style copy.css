@@ -55,11 +55,11 @@ nav{
     height: 200px; 
 }
 
-#logo:hover{
+/* #logo:hover{
     transition: all 1s;
     transform: scale(1.2);
     filter: opacity(.7)
-}
+} */
 /****** mobile: section restaurantMenu ******/
 
 .subHeader{
