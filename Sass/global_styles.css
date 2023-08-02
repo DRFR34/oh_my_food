@@ -87,62 +87,56 @@ p {
 }
 
 /******* mobile: footer ******/
-footer * {
-  color: #FFFFFF;
-}
-
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
   background-color: #353535;
 }
-
-footer h2 {
+.footer * {
+  color: #FFFFFF;
+}
+.footer h2 {
   padding: 10px 0;
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   font-weight: 400;
 }
-
-.footerBox {
+.footer__box {
   display: flex;
   flex-direction: column;
 }
-
-.footerItem {
+.footer__box__item {
   display: flex;
   align-items: center;
   padding: 2px 1px;
 }
-
-.footerIconBox {
+.footer__box__item__iconBox {
   padding: 0 10px 0 0;
 }
-
-.footerItem i {
+.footer__box__item__iconBox__icon {
   color: #FFFFFF;
   font-size: 15px;
 }
 
 @media (min-width: 1024px) {
   /**desktop: footer */
-  footer {
+  .footer {
     padding: 70px 80px 20px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
   }
-  footer h2 {
+  .footer h2 {
     padding: 0 0 10px 100px;
   }
-  .footerItem {
+  .footer__box {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__box__item {
     padding: 2px 15px;
     color: #FFFFFF;
     font-weight: 400;
-  }
-  .footerBox {
-    display: flex;
-    flex-direction: row;
   }
 }/*# sourceMappingURL=global_styles.css.map */

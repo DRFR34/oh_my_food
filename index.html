@@ -13,8 +13,8 @@
 
         <div class="loaderBg__animContainer">
             <div class="loaderBg__animContainer__txt oh"><span class="loaderBg__animContainer__txt--ohColor">oh</span>myfood</div>
-            <div class="loaderBg__animContainer__txt my">oh<span class="myColor">my</span>food</div>           
-            <div class="loaderBg__animContainer__txt food">ohmy<span class="foodColor">food</span></div>
+            <div class="loaderBg__animContainer__txt my">oh<span class="loaderBg__animContainer__txt--myColor">my</span>food</div>           
+            <div class="loaderBg__animContainer__txt food">ohmy<span class="loaderBg__animContainer__txt--foodColor">food</span></div>
             <img src="images/couvercle-plat-de-service.svg" alt="couvercle du plat de service" id="couvercle">
             <img id="plat" src="./images/plat-de-service.svg" alt="plat deservice">
         </div>
@@ -58,7 +58,7 @@
                 <li class="howTo__List__Item boxShadow">
                     <div class="howTo__List__Item__Content">
                         <div class="howTo__List__Item__Content__Number">
-                            1
+                            2
                         </div>
                         <div class="howTo__List__Item__Content__IconBox">
                             <i class="howTo__List__Item__Content__IconBox__Icon fa-solid fa-mobile-screen"></i>
@@ -69,7 +69,7 @@
                 <li class="howTo__List__Item boxShadow">
                     <div class="howTo__List__Item__Content">
                         <div class="howTo__List__Item__Content__Number">
-                            1
+                            3
                         </div>
                         <div class="howTo__List__Item__Content__IconBox">
                             <i class="howTo__List__Item__Content__IconBox__Icon fa-solid fa-mobile-screen"></i>
@@ -80,66 +80,60 @@
             </ol>
         </section>
 
-        <section id="restaurants">
+        <section class="restaurants">
             <h2>Restaurants</h2>
-            <div class="restaurantsCardsList">
-                <article class="restaurantCard">
-                    <a href="./restaurants/la_palette_du_gout.html" class="restaurantCardLink">
-                        <img class="restaurantWindow" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restarant la palette du goût">
-                        <div class="restaurantCardText">
+            <div class="restaurants__cardsList">
+                <article class="restaurants__cardsList__card">
+                    <a href="./restaurants/la_palette_du_gout.html" class="restaurants__cardsList__card__link">
+                        <img class="restaurants__cardsList__card__link__window" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restarant la palette du goût">
+                        <div class="restaurants__cardsList__card__link__text">
                             <h3>La palette du goût<table></table></h3>
                             <p>Ménilmontant</p>
                         </div>
-                        <div class="newLabel">Nouveau</div>
+                        <div class="restaurants__cardsList__card__link__newLabel">Nouveau</div>
                     </a>
-                    <!-- <label class="heartBox">
-                        <input  type="checkbox">
-                        <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
-                        <i class="heartFilled fa-solid fa-heart"></i>
-                    </label> -->
                     <div class="heartBox">
                         <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
                         <i class="heartFilled fa-solid fa-heart"></i>
                     </div>
                 </article>
-                <article class="restaurantCard">
+                <article class="restaurants__cardsList__card">
                     <a href="restaurants/la_note_enchantee.html
-                    " class="restaurantCardLink">
-                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Un plat du restaurant la note enchantée" class="restaurantWindow">
-                        <div class="restaurantCardText">
-                            <h3>La note enchantée</h3>
+                    " class="restaurants__cardsList__card__link">
+                        <img class="restaurants__cardsList__card__link__window" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Un plat du restaurant la note enchantée">
+                        <div class="restaurants__cardsList__card__link__text">
+                            <h3>La note enchantée<table></table></h3>
                             <p>Charonne</p>
                         </div>
-                        <div class="newLabel">Nouveau</div>
+                        <div class="restaurants__cardsList__card__link__newLabel">Nouveau</div>
                     </a>
                     <div class="heartBox">
                         <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
                         <i class="heartFilled fa-solid fa-heart"></i>
                     </div>
                 </article>
-                <article class="restaurantCard">
-                    <a href="restaurants/a_la_francaise.html" class="restaurantCardLink">
-                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Un plat du restaurant à la française" class="restaurantWindow">
-                        <div class="restaurantCardText">
-                            <h3>À la française</h3>
-                            <p>Cité Rouge
-                            </p>
+                <article class="restaurants__cardsList__card">
+                    <a href="restaurants/a_la_francaise.html" class="restaurants__cardsList__card__link">
+                        <img class="restaurants__cardsList__card__link__window"src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Un plat du restaurant à la française">
+                        <div class="restaurants__cardsList__card__link__text">
+                            <h3>À la française<table></table></h3>
+                            <p>Cité Rouge</p>
                         </div>
-                        <!-- <div class="newLabel">Nouveau</div> -->
+                        <!-- <div class="restaurants__cardsList__card__link__newLabel">Nouveau</div> -->
                     </a>
                     <div class="heartBox">
                         <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
                         <i class="heartFilled fa-solid fa-heart"></i>
                     </div>
                 </article>
-                <article class="restaurantCard">
-                    <a href="restaurants/le_delice_des_sens.html" class="restaurantCardLink">
-                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Un plat du délice des sens" class="restaurantWindow">
-                        <div class="restaurantCardText">
-                            <h3>Le délice des sens</h3>
+                <article class="restaurants__cardsList__card">
+                    <a href="restaurants/le_delice_des_sens.html" class="restaurants__cardsList__card__link">
+                        <img class="restaurants__cardsList__card__link__window"src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Un plat du délice des sens">
+                        <div class="restaurants__cardsList__card__link__text">
+                            <h3>Le délice des sens<table></table></h3>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <!-- <div class="newLabel">Nouveau</div> -->
+                        <!-- <div class="restaurants__cardsList__card__link__newLabel">Nouveau</div> -->
                     </a>
                     <div class="heartBox">
                         <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
@@ -150,34 +144,40 @@
 
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <h2>ohmyfood</h2>        
-        <div class="footerBox">            
+        <div class="footer__box">            
             <a href="">
-                <div class="footerItem">
-                    <div class="footerIconBox">
-                        <i class="footerIcon fa-solid fa-utensils"></i>
+                <div class="footer__box__item">
+                    <div class="footer__box__item__iconBox">
+                        <i class="footer__box__item__iconBox__icon fa-solid fa-utensils"></i>
                     </div>
-                    <p>Proposer un restaurant</p>
-                </div>
-                </a>
-            <a href="">
-                <div class="footerItem">
-                    <div class="footerIconBox">
-                        <i class="footerIcon fa-solid fa-handshake-angle"></i>
-                    </div>
-                    <p>Devenir partenaire</p>
-                </div>
-                </a>
-            <a href="">
-                <div class="footerItem">
-                    <p>Mentions légales</p>
+                    <p class="footer__box__item__p">Proposer un restaurant</p>
                 </div>
             </a>
             <a href="">
-                <div class="footerItem">
-                    <p>Contact</p>
-                </div>   
+                <div class="footer__box__item">
+                    <div class="footer__box__item__iconBox">
+                        <i class="footer__box__item__iconBox__icon fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <p class="footer__box__item__p">Devenir partenaire</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="footer__box__item">
+                    <!-- <div class="footer__box__item__iconBox">
+                        <i class="footer__box__item__iconBox__icon fa-solid "></i>
+                    </div> -->
+                    <p class="footer__box__item__p">Mentions légales</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="footer__box__item">
+                    <!-- <div class="footer__box__item__iconBox">
+                        <i class="footer__box__item__iconBox__icon fa-solid "></i>
+                    </div> -->
+                    <p class="footer__box__item__p">Contact</p>
+                </div>
             </a>
         </div>        
     </footer>    

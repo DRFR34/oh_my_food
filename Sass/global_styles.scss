@@ -118,44 +118,49 @@ p{
 /******* mobile: footer ******/
 
 
- footer *{
-    color: $clear-font-color;
-}
-
- footer{
+ .footer {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
-    background-color: $semi-dark-bg-color;    
-}
-
-footer h2{
+    background-color: $semi-dark-bg-color;
+    *{
+    color: $clear-font-color;
+    }
+    h2{
     padding: 10px 0;
     font-family: 'Shrikhand', cursive;
     font-size: 18px;
     font-weight: 400;
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+    
+        &__item{
+            display:flex;
+            align-items: center;
+            padding: 2px 1px;
+
+            &__iconBox{
+                padding: 0 10px 0 0;
+
+                &__icon{ 
+                    color: $clear-font-color;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
 }
 
 
-.footerBox{
-    display: flex;
-    flex-direction: column;
-}
 
-.footerItem{
-    display:flex;
-    align-items: center;
-    padding: 2px 1px;
-}
 
-.footerIconBox{
-    padding: 0 10px 0 0;
-}
 
-.footerItem i{ 
-    color: $clear-font-color;
-    font-size: 15px;
-}
+
+
+
+
 
 //************ MEDIA QUERIES *******************
 
@@ -166,25 +171,30 @@ footer h2{
 
 
     
-    footer {
+    .footer {
         padding: 70px 80px 20px;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-    }
 
-    footer h2 {
-        padding: 0 0 10px 100px;
-    }
-
-    .footerItem{    
-        padding: 2px 15px;
-        color: $clear-font-color;
-        font-weight: 400;
-    }
-
-    .footerBox{
+        h2 {
+                padding: 0 0 10px 100px;
+            }
+        &__box{
         display: flex;
         flex-direction: row;
+            &__item{    
+                    padding: 2px 15px;
+                    color: $clear-font-color;
+                    font-weight: 400;
+            }
+        }
     }
+
+    
+    
+
+    
+
+    
 }
