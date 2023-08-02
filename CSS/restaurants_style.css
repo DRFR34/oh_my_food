@@ -168,7 +168,6 @@ article:nth-child(4){
     .dishCard{
         position: relative;
         border-style: none;
-        box-shadow: 0px 0px 10px 0px  rgba(236, 234, 234, 0.356);
         border-radius: 15px;
         background-color: white;
         display: flex;
