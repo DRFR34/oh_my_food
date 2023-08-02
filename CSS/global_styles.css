@@ -1,5 +1,5 @@
 /**==============================================
-**      ALL PAGES
+**     GENERAL
 **==================================================*/
 
 
@@ -13,8 +13,6 @@
 }
 
 body{
-    /*  à voir si vraiment nécessaire avec body */
-    /* position:absolute; */
     max-width: 1440px;
     margin: auto;
 }
@@ -58,6 +56,9 @@ p{
     box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
 }
 
+
+/****** Boutons principaux  ******/
+
 .mainBtn{
     box-shadow: 0px 0px 10px 0px  rgba(252, 252, 252, 0.24);
     border-radius: 50px;
@@ -72,19 +73,16 @@ p{
     transition: .6s;
     filter:brightness(1.1);
     box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
-
-
 }
 
+/****** Coeurs ******/
 
-
-/** heartbox */
 .heartBox{    
     position: absolute; 
     font-size: 30px;
 }
 
-.heartEmpty, .heartFilled, .bgHeartColor, .bgHeartGrey{
+.heartEmpty, .heartFilled{
     font-size: 30px;
     position: absolute;
     top:50%;
@@ -135,18 +133,23 @@ p{
     display:none;
 }
 
-
+/* ================================================
+** Footer
+================================================ */
 /******* mobile: footer ******/
 
-footer{
+
+ footer *{
+    color: var(--clear-font-color);
+}
+
+ footer{
+    display: flex;
+    flex-direction: column;
     padding: 10px 20px;
     background-color: var(--semi-dark-bg-color);    
 }
-footer *{    
-    color: var(--clear-font-color);
-    font-weight: 400;
 
-}
 footer h2{
     padding: 10px 0;
     font-family: 'Shrikhand', cursive;
@@ -154,21 +157,55 @@ footer h2{
     font-weight: 400;
 }
 
-.footerBox a{
-    display: inline-block;
-    padding: 2px 0;
-}
-.footerItem{
-    padding: 2px 0;
+
+.footerBox{
+    display: flex;
+    flex-direction: column;
 }
 
 .footerItem{
-    display: flex;
+    display:flex;
     align-items: center;
+    padding: 2px 1px;
 }
 
 .footerIconBox{
     padding: 0 10px 0 0;
 }
 
+.footerItem i{ 
+    color: var(--clear-font-color);
+    font-size: 15px;
+}
 
+
+
+
+@media (min-width: 1024px) {
+    
+    /**desktop: footer */
+
+
+    
+    footer {
+        padding: 70px 80px 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    footer h2 {
+        padding: 0 0 10px 100px;
+    }
+
+    .footerItem{    
+        padding: 2px 15px;
+        color: var(--clear-font-color);
+        font-weight: 400;
+    }
+
+    .footerBox{
+        display: flex;
+        flex-direction: row;
+    }
+}

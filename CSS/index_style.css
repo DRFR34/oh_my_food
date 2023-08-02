@@ -281,7 +281,7 @@ h1{
 
 /******* mobile: footer ******/
 
-footer{
+/* footer{
     padding: 10px 20px;
     background-color: var(--semi-dark-bg-color);    
 }
@@ -314,7 +314,7 @@ footer h2{
 
 .footerIconBox{
     padding: 0 10px 0 0;
-}
+} */
 
 
 
@@ -384,7 +384,7 @@ footer h2{
 
      /*** desktop: footer ***/
 
-     footer{
+     /* footer{
         padding: 60px 0 30px;
         display: flex;
         flex-direction: row-reverse;
@@ -400,6 +400,6 @@ footer h2{
         
         display: flex;
         gap: 30px;
-     }
+     } */
 
 }

@@ -3,9 +3,6 @@
 
 
 
-  
-
-
 .fadingRestaurant{
     z-index: -2;
     position: fixed;
@@ -14,7 +11,7 @@
     width:100%;
     height:100%; 
     background-color: rgba(255,255,255,0);
-    animation: fadingRestaurantAnim .5s ease-out; 
+    animation: fadingRestaurantAnim .3s ease-out; 
     animation-fill-mode: backwards; 
     animation-iteration-count: 1;
 }
@@ -35,37 +32,6 @@
         }
 }
 
-
-/* ***** fadding plats
-
-article:nth-child(1){
-    animation: articlesAnim  4s ;
-    animation-fill-mode: backwards;
-}
-article:nth-child(2){
-    animation: articlesAnim  3s 2s ;
-    animation-fill-mode: backwards;
-}
-article:nth-child(3){
-    animation: articlesAnim 1s 3s;
-    animation-fill-mode: backwards;
-}
-
-
-@keyframes articlesAnim {
-   0%{
-    opacity: .2;
-    transform: scale(.5);
-   }
- 
-    80%{opacity: 0.5;
-}
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-} */
 
 
 
@@ -194,20 +160,6 @@ article:nth-child(4){
     gap: 20px;
 }
 
-    /* .customCheck{
-        
-        position: relative;
-        border-style: none;
-        box-shadow: 0px 0px 10px 0px  rgba(236, 234, 234, 0.356);
-        border-radius: 15px;
-        background-color: white;
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        overflow: hidden;
-    } */
-
-/* ! */
     .dishCard{
         position: relative;
         border-style: none;
@@ -235,11 +187,6 @@ article:nth-child(4){
     padding: 10px  0 10px 10px;   
 }
 
-/* .customCheck:hover .dishDescription {
-    animation: textReduction 0.5s linear ;
-    animation-fill-mode:forwards;
-} */
-
 .dishCard:hover .dishDescription {
     animation: textReduction 0.3s linear ;
     animation-fill-mode:forwards;
@@ -265,29 +212,6 @@ article:nth-child(4){
 @keyframes priceAndCheckBtnTranslate {
     100%{ transform: translateX(-65px); }
 }
-
-/* .dishCard:hover .dishPriceAndCheckBtn .checkButton .fa-check{
-    animation: faCheckWarning  linear 2s 1;
-    animation-fill-mode:forwards;
-}
-
-@keyframes faCheckWarning{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0;
-    }
-    75%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-} */
 
 
 .dishName{
@@ -338,10 +262,6 @@ article:nth-child(4){
     transform: translate(-50%, -50%);
 }
 
-/* .fa-circle-check, .fa-circle{
-    color: white;
-} */
-
 
 /** mobile: clics sur check  **/
 
@@ -363,31 +283,6 @@ article:nth-child(4){
     color:var(--tertiary-color)
 }
 
-/* 
-    .customCheck input {
-        display: none;
-    }
- 
-    .customCheck input:checked ~ .dishPriceAndCheckBtn{
-        transform: translateX(-65px);
-
-    }
-
-    .customCheck input:checked ~ .dishDescription {
-        animation: textReduction 0s linear ;
-        animation-fill-mode:forwards;
-    
-    }
-
-    .customCheck input:checked ~ .dishPriceAndCheckBtn .checkButton .fa-circle {
-       animation: none;
-    }
-
-    .customCheck input:checked ~ .dishPriceAndCheckBtn .checkButton .fa-check {
-        animation: none;
-    } */
-
-
 
 /****** mobile: Section Commander */
 
@@ -405,15 +300,13 @@ article:nth-child(4){
 
 /******* mobile: footer ******/
 
-footer{
+/* footer{
+    display: flex;
+    flex-direction: column;
     padding: 10px 20px;
     background-color: var(--semi-dark-bg-color);    
 }
-footer *{    
-    color: var(--clear-font-color);
-    font-weight: 400;
 
-}
 footer h2{
     padding: 10px 0;
     font-family: 'Shrikhand', cursive;
@@ -421,22 +314,25 @@ footer h2{
     font-weight: 400;
 }
 
-.footerBox a{
-    display: block;
-    padding: 2px 0;
-}
-.footerItem{
-    padding: 2px 0;
-}
 
-.footerItem{
+.footerBox{
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
-.footerIconBox{
-    padding: 0 10px 0 0;
+.footerItem{
+    display:flex;
+    align-items: center;
+    padding: 2px 1px;
 }
+
+.footerItem i{ 
+    color: var(--clear-font-color);
+} */
+
+
+
+
 
 
 
@@ -457,7 +353,6 @@ footer h2{
     .subHeader{
         max-width: 1050px;
         margin: auto;
-        /* padding: 60px 205px 60px 205px; */
     }
 
     .restaurantMenu{
@@ -471,24 +366,6 @@ footer h2{
     .restaurantTitle>.heartBox {
         right: 0;
         padding: 0 45px;
-    }
-
-    /**desktop: footer */
-
-    footer {
-        padding: 70px 80px 20px;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-
-    footer h2 {
-        padding: 0 0 10px 100px;
-    }
-
-    .footerBox{
-        display: flex;
-        flex-direction: row;
     }
 
 
