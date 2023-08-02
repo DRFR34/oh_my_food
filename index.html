@@ -5,24 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
     <link rel="icon" type="image/x-icon" href="/images/favico2.ico">
-
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet"> -->
-<!--     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" > -->
     <script src="https://kit.fontawesome.com/64a15eb5cd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="CSS/index_style.css">
+    <link rel="stylesheet" href="Sass/index_style.css">
 </head>
 <body>
     <div class="loaderBg">
 
-        <div class="animContainer">
-            <div class="txt oh"><span class="ohColor">oh</span>myfood</div>
-            <div class="txt my">oh<span class="myColor">my</span>food</div>           
-            <div class="txt food">ohmy<span class="foodColor">food</span></div>
+        <div class="loaderBg__animContainer">
+            <div class="loaderBg__animContainer__txt oh"><span class="loaderBg__animContainer__txt--ohColor">oh</span>myfood</div>
+            <div class="loaderBg__animContainer__txt my">oh<span class="myColor">my</span>food</div>           
+            <div class="loaderBg__animContainer__txt food">ohmy<span class="foodColor">food</span></div>
             <img src="images/couvercle-plat-de-service.svg" alt="couvercle du plat de service" id="couvercle">
             <img id="plat" src="./images/plat-de-service.svg" alt="plat deservice">
         </div>
@@ -30,18 +22,18 @@
 
     </div>
 
-    <header>
+    <header class="header">
         
         <img src="images/logo/ohmyfood@2x.svg" alt="logo oh my food" class="logo">
         
-        <form action="submit" class="locationSearch">
-            <div class="locationIconBox">
-                <i class="location-icon fa-solid fa-location-dot"></i>
+        <form action="submit" class="header__locationSearch">
+            <div class="header__locationSearch__locationIconBox">
+                <i class="header__locationSearch__locationIconBox__location-icon fa-solid fa-location-dot"></i>
             </div>
-            <input id="searchField" type="search" placeholder="Paris, Belleville">
+            <input class="header__locationSearch__searchField" type="search" placeholder="Paris, Belleville">
         </form>
 
-        <section id="hero">
+        <section class="header__hero">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
             <a href="#restaurants"><button class="mainBtn boxShadow">Explorer nos restaurants</button></a>
@@ -49,42 +41,42 @@
     </header>
 
     <main>
-        <section id="howTo">
-            <h2>Fonctionnement</h2>
-            <ol class="howToList">
-                <li class="howToListItem boxShadow">
-                    <div class="howToItemContent">
-                        <div class="howToItemNumber">
+        <section class="howTo">
+            <h2 class="howTo__h2">Fonctionnement</h2>
+            <ol class="howTo__List">
+                <li class="howTo__List__Item boxShadow">
+                    <div class="howTo__List__Item__Content">
+                        <div class="howTo__List__Item__Content__Number">
                             1
                         </div>
-                        <div class="howToIconBox">
-                            <i class="howToIcon fa-solid fa-mobile-screen"></i>
+                        <div class="howTo__List__Item__Content__IconBox">
+                            <i class="howTo__List__Item__Content__IconBox__Icon fa-solid fa-mobile-screen"></i>
                         </div>
                         <p>Choisissez un restaurant</p>
                     </div>
                 </li>
-                <li class="howToListItem boxShadow">
-                    <div class="howToItemContent">
-                        <div class="howToItemNumber">
-                            2
+                <li class="howTo__List__Item boxShadow">
+                    <div class="howTo__List__Item__Content">
+                        <div class="howTo__List__Item__Content__Number">
+                            1
                         </div>
-                        <div class="howToIconBox">
-                            <i class="howToIcon fa-solid fa-list-ul"></i>
+                        <div class="howTo__List__Item__Content__IconBox">
+                            <i class="howTo__List__Item__Content__IconBox__Icon fa-solid fa-mobile-screen"></i>
                         </div>
                         <p>Composez votre menu</p>
                     </div>
                 </li>
-                <li class="howToListItem boxShadow">
-                    <div class="howToItemContent">
-                        <div class="howToItemNumber">
-                            3
+                <li class="howTo__List__Item boxShadow">
+                    <div class="howTo__List__Item__Content">
+                        <div class="howTo__List__Item__Content__Number">
+                            1
                         </div>
-                        <div class="howToIconBox">
-                            <i class="howToIcon fa-solid fa-store"></i>
+                        <div class="howTo__List__Item__Content__IconBox">
+                            <i class="howTo__List__Item__Content__IconBox__Icon fa-solid fa-mobile-screen"></i>
                         </div>
                         <p>Dégustez au restaurant</p>
                     </div>
-                </li>
+                </li>                
             </ol>
         </section>
 

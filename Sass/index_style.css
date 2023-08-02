@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/****** Général *******/
+@import url(global_styles.css);
+@import url(loader.css);
+.header {
+  padding: 30px 0;
+  text-align: center;
+}
+.header .logo {
+  width: 160px;
+  margin: auto;
+  padding: 0 0 10px 0;
+}
+.header__locationSearch {
+  height: 46px;
+  border-top: solid 2px;
+  border-color: #949292;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__locationSearch__searchField {
+  width: 135px;
+  border-style: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+}
+.header__locationSearch__searchField:focus {
+  outline: none;
+  background-color: rgba(250, 144, 241, 0.2196078431);
+}
+.header__locationSearch__searchField:focus::-moz-placeholder {
+  color: transparent;
+}
+.header__locationSearch__searchField:focus::placeholder {
+  color: transparent;
+}
+.header__locationSearch__locationIconBox {
+  padding: 0 15px 0 0;
+}
+.header__hero {
+  padding: 20px;
+}
+.header__hero h1 {
+  color: #008766;
+  width: 80%;
+  margin: auto;
+  padding: 0 0 10px 0;
+}
+.header__hero p {
+  padding: 20px 0;
+  color: red;
+}
+
+.howTo {
+  background-color: rgb(217, 255, 0);
+  padding: 20px;
+}
+.howTo h2 {
+  padding: 30px 0;
+  color: rgb(255, 0, 34);
+}
+.howTo__List {
+  border: 1px solid red;
+  padding: 30px 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.howTo__List__Item {
+  list-style-type: none;
+  border-radius: 20px;
+  padding: 25px;
+  background-color: var(--secondary-bg-color);
+  font-weight: 500;
+}
+.howTo__List__Item__Content {
+  background-color: rgb(196, 255, 204);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.howTo__List__Item__Content__Number {
+  position: absolute;
+  left: -35px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+.howTo__List__Item__Content__IconBox {
+  padding: 0 15px 0 0;
+  background-color: #fa90f1;
+}
+.howTo__List__Item:hover {
+  transform: scaleY(1.1);
+}
+
+.howToListItem:hover i {
+  color: #9356DC;
+}
+
+.howToItemContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.howToItemNumber {
+  position: absolute;
+  left: -35px;
+  /* top: -5px; */
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.howToIconBox {
+  padding: 0 15px 0 0;
+}
+
+/*** mobile: section Restaurants ***/
+#restaurants {
+  padding: 50px 20px;
+  background-color: #F6F6F6;
+}
+
+.restaurantsCardsList {
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.restaurantCard {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.restaurantWindow {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.newLabel {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border-radius: 2px;
+  padding: 6px 12px;
+  background-color: #99E2D0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #008766;
+}
+
+.restaurantCardText {
+  padding: 18px 12px;
+  line-height: 25px;
+}
+
+.heartBox {
+  bottom: 55px;
+  right: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 0;
+  }
+  .logo {
+    width: 200px;
+    padding: 25px 0;
+  }
+  .locationSearch {
+    border: none;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  #howTo {
+    padding: 30px 200px;
+  }
+  .howToList {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .howToListItem {
+    width: 370px;
+    font-weight: 600;
+  }
+  .howToListItem p {
+    font-weight: 500;
+  }
+  #restaurants {
+    padding: 50px 180px 0;
+  }
+  .restaurantsCardsList {
+    padding: 30px 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .restaurantCard {
+    width: 490px;
+  }
+}/*# sourceMappingURL=index_style.css.map */

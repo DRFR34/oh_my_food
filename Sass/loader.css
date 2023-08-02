@@ -1,0 +1,197 @@
+@import url(global_styles.css);
+/****** mobile: loader ******/
+.loaderBg {
+  z-index: 5;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: loaderRestaurantAnim 3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loaderRestaurantAnim {
+  0% {
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+  }
+  70.999% {
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+  }
+  99.999% {
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    z-index: -2;
+  }
+}
+.animContainer {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 320px;
+  margin: auto;
+  height: 20px;
+  transform: translateX(-50%);
+}
+
+.txt {
+  transform: translateX(-9999px);
+  color: transparent;
+  position: absolute;
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+  offset: path("M 0 91 C 27 94 54 114 83 183 C 113 113 140 147 163 184 C 173 157 182 177 189 185 L 197 186") 0deg;
+  offset: rotate(0);
+}
+
+span {
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+}
+
+.ohColor {
+  color: var(--primary-color);
+}
+
+.myColor {
+  color: var(--tertiary-color);
+}
+
+.foodColor {
+  color: var(--secondary-color);
+}
+
+.oh {
+  animation: move1 1.5s 1.5s 1;
+  animation-fill-mode: forwards;
+}
+
+.my {
+  animation: move2 2s 1s;
+  animation-fill-mode: forwards;
+}
+
+.food {
+  animation: move3 2.5s 0.5s;
+  animation-fill-mode: forwards;
+}
+
+svg {
+  position: absolute;
+}
+
+@keyframes move1 {
+  0% {
+    transform: translateX(-50px);
+  }
+  30% {
+    offset-distance: 100%;
+    transform: translateX(-35px);
+  }
+  99.999% {
+    offset-distance: 100%;
+    transform: translateX(-35px);
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    transform: translateX(-35px);
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes move2 {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    offset-distance: 100%;
+    transform: translateX(-35px);
+  }
+  99.999% {
+    offset-distance: 100%;
+    transform: translateX(-35px);
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    transform: translateX(-35px);
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes move3 {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    offset-distance: 100%;
+    transform: translateX(-35px);
+  }
+  99.999% {
+    offset-distance: 100%;
+    transform: translateX(-35px);
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    transform: translateX(-35px);
+    opacity: 0;
+    z-index: -2;
+  }
+}
+#plat, #couvercle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.5;
+  width: 300px;
+}
+
+#plat {
+  transform: translate(-50%, 140%);
+  animation: animPlat 3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+#couvercle {
+  transform: translate(-50%, 45%);
+  animation: animCouvercle 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animCouvercle {
+  25% {
+    transform: translate(-30%, -15%);
+    rotate: 35deg;
+    opacity: 0.5;
+  }
+  99.99% {
+    transform: translate(-30%, -15%);
+    rotate: 35deg;
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-30%, -15%);
+    rotate: 35deg;
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes animPlat {
+  99.99% {
+    transform: translate(-50%, 140%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, 140%);
+    opacity: 0;
+    z-index: -2;
+  }
+}/*# sourceMappingURL=loader.css.map */

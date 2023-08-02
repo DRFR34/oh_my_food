@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohmyfood</title>
+    <link rel="icon" type="image/x-icon" href="/images/favico2.ico">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet"> -->
+<!--     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" > -->
+    <script src="https://kit.fontawesome.com/64a15eb5cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Sass/index_style.css">
+</head>
+<body>
+    <div class="loaderBg">
+
+        <div class="animContainer">
+            <div class="txt oh"><span class="ohColor">oh</span>myfood</div>
+            <div class="txt my">oh<span class="myColor">my</span>food</div>           
+            <div class="txt food">ohmy<span class="foodColor">food</span></div>
+            <img src="images/couvercle-plat-de-service.svg" alt="couvercle du plat de service" id="couvercle">
+            <img id="plat" src="./images/plat-de-service.svg" alt="plat deservice">
+        </div>
+
+
+    </div>
+
+    <header>
+        
+        <img src="images/logo/ohmyfood@2x.svg" alt="logo oh my food" class="logo">
+        
+        <form action="submit" class="locationSearch">
+            <div class="locationIconBox">
+                <i class="location-icon fa-solid fa-location-dot"></i>
+            </div>
+            <input id="searchField" type="search" placeholder="Paris, Belleville">
+        </form>
+
+        <section id="hero">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+            <a href="#restaurants"><button class="mainBtn boxShadow">Explorer nos restaurants</button></a>
+        </section>
+    </header>
+
+    <main>
+        <section id="howTo">
+            <h2>Fonctionnement</h2>
+            <ol class="howToList">
+                <li class="howToListItem boxShadow">
+                    <div class="howToItemContent">
+                        <div class="howToItemNumber">
+                            1
+                        </div>
+                        <div class="howToIconBox">
+                            <i class="howToIcon fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <p>Choisissez un restaurant</p>
+                    </div>
+                </li>
+                <li class="howToListItem boxShadow">
+                    <div class="howToItemContent">
+                        <div class="howToItemNumber">
+                            2
+                        </div>
+                        <div class="howToIconBox">
+                            <i class="howToIcon fa-solid fa-list-ul"></i>
+                        </div>
+                        <p>Composez votre menu</p>
+                    </div>
+                </li>
+                <li class="howToListItem boxShadow">
+                    <div class="howToItemContent">
+                        <div class="howToItemNumber">
+                            3
+                        </div>
+                        <div class="howToIconBox">
+                            <i class="howToIcon fa-solid fa-store"></i>
+                        </div>
+                        <p>Dégustez au restaurant</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section id="restaurants">
+            <h2>Restaurants</h2>
+            <div class="restaurantsCardsList">
+                <article class="restaurantCard">
+                    <a href="./restaurants/la_palette_du_gout.html" class="restaurantCardLink">
+                        <img class="restaurantWindow" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restarant la palette du goût">
+                        <div class="restaurantCardText">
+                            <h3>La palette du goût<table></table></h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="newLabel">Nouveau</div>
+                    </a>
+                    <!-- <label class="heartBox">
+                        <input  type="checkbox">
+                        <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
+                        <i class="heartFilled fa-solid fa-heart"></i>
+                    </label> -->
+                    <div class="heartBox">
+                        <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
+                        <i class="heartFilled fa-solid fa-heart"></i>
+                    </div>
+                </article>
+                <article class="restaurantCard">
+                    <a href="restaurants/la_note_enchantee.html
+                    " class="restaurantCardLink">
+                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Un plat du restaurant la note enchantée" class="restaurantWindow">
+                        <div class="restaurantCardText">
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <div class="newLabel">Nouveau</div>
+                    </a>
+                    <div class="heartBox">
+                        <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
+                        <i class="heartFilled fa-solid fa-heart"></i>
+                    </div>
+                </article>
+                <article class="restaurantCard">
+                    <a href="restaurants/a_la_francaise.html" class="restaurantCardLink">
+                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Un plat du restaurant à la française" class="restaurantWindow">
+                        <div class="restaurantCardText">
+                            <h3>À la française</h3>
+                            <p>Cité Rouge
+                            </p>
+                        </div>
+                        <!-- <div class="newLabel">Nouveau</div> -->
+                    </a>
+                    <div class="heartBox">
+                        <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
+                        <i class="heartFilled fa-solid fa-heart"></i>
+                    </div>
+                </article>
+                <article class="restaurantCard">
+                    <a href="restaurants/le_delice_des_sens.html" class="restaurantCardLink">
+                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Un plat du délice des sens" class="restaurantWindow">
+                        <div class="restaurantCardText">
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <!-- <div class="newLabel">Nouveau</div> -->
+                    </a>
+                    <div class="heartBox">
+                        <i class="uncheckedHeart heartEmpty fa-regular fa-heart"></i>
+                        <i class="heartFilled fa-solid fa-heart"></i>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <h2>ohmyfood</h2>        
+        <div class="footerBox">            
+            <a href="">
+                <div class="footerItem">
+                    <div class="footerIconBox">
+                        <i class="footerIcon fa-solid fa-utensils"></i>
+                    </div>
+                    <p>Proposer un restaurant</p>
+                </div>
+                </a>
+            <a href="">
+                <div class="footerItem">
+                    <div class="footerIconBox">
+                        <i class="footerIcon fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <p>Devenir partenaire</p>
+                </div>
+                </a>
+            <a href="">
+                <div class="footerItem">
+                    <p>Mentions légales</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="footerItem">
+                    <p>Contact</p>
+                </div>   
+            </a>
+        </div>        
+    </footer>    
+</body>
+
+</html>
