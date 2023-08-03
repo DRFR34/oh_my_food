@@ -6,20 +6,20 @@
     <title>La palette du goût</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="https://kit.fontawesome.com/64a15eb5cd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../CSS/restaurants_style.css" >
+    <link rel="stylesheet" href="../Sass/restaurants_style.css" >
 </head>
 
 <body>
     <div class="fadingRestaurant"></div>
-    <header>
-        <nav class=""restaurant-nav>            
+    <header class=".header">
+        <nav class="header__restaurantNav">            
                 <a href="../index.html">
-                    <i class="previousIcon fa-solid fa-arrow-left "></i>
+                    <i class="header__restaurantNav__previousIcon fa-solid fa-arrow-left "></i>
                 </a>            
-                <img id="logo" src="../images/logo/ohmyfood@2x.svg" alt="Logo Oh my food">
+                <img class="header__restaurantNav__logo" src="../images/logo/ohmyfood@2x.svg" alt="Logo Oh my food">
         </nav>    
-        <div class="banner">
-            <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restaurant" class="restaurant-window">
+        <div class="header__banner">
+            <img class="header__banner__restaurantWindow" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restaurant">
         </div>      
     </header>
     <main>
@@ -188,37 +188,43 @@
             </section> 
         </div>
     </main>    
-    <footer>
+    <footer class="footer">
         <h2>ohmyfood</h2>        
-        <div class="footerBox">            
+        <div class="footer__box">            
             <a href="">
-                <div class="footerItem">
-                    <div class="footerIconBox">
-                        <i class="footerIcon fa-solid fa-utensils"></i>
+                <div class="footer__box__item">
+                    <div class="footer__box__item__iconBox">
+                        <i class="footer__box__item__iconBox__icon fa-solid fa-utensils"></i>
                     </div>
-                    <p>Proposer un restaurant</p>
-                </div>
-                </a>
-            <a href="">
-                <div class="footerItem">
-                    <div class="footerIconBox">
-                        <i class="footerIcon fa-solid fa-handshake-angle"></i>
-                    </div>
-                    <p>Devenir partenaire</p>
-                </div>
-                </a>
-            <a href="">
-                <div class="footerItem">
-                    <p>Mentions légales</p>
+                    <p class="footer__box__item__p">Proposer un restaurant</p>
                 </div>
             </a>
             <a href="">
-                <div class="footerItem">
-                    <p>Contact</p>
-                </div>   
+                <div class="footer__box__item">
+                    <div class="footer__box__item__iconBox">
+                        <i class="footer__box__item__iconBox__icon fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <p class="footer__box__item__p">Devenir partenaire</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="footer__box__item">
+                    <!-- <div class="footer__box__item__iconBox">
+                        <i class="footer__box__item__iconBox__icon fa-solid "></i>
+                    </div> -->
+                    <p class="footer__box__item__p">Mentions légales</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="footer__box__item">
+                    <!-- <div class="footer__box__item__iconBox">
+                        <i class="footer__box__item__iconBox__icon fa-solid "></i>
+                    </div> -->
+                    <p class="footer__box__item__p">Contact</p>
+                </div>
             </a>
         </div>        
-    </footer>
+    </footer> 
 </body>
 
 </html>

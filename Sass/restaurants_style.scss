@@ -1,0 +1,388 @@
+
+@import url(global_styles.css);
+
+
+
+.fadingRestaurant{
+    z-index: -2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%; 
+    background-color: rgba(255,255,255,0);
+    animation: fadingRestaurantAnim .3s ease-out; 
+    animation-fill-mode: backwards; 
+    animation-iteration-count: 1;
+}
+
+
+@keyframes fadingRestaurantAnim  {
+    0% { 
+        background-color: rgba(255,255,255,1); 
+        z-index: 10;
+        }
+        99.999% {
+        background-color: rgba(255,255,255,0);
+        z-index: 10;
+        } 
+        100% { 
+        background-color: rgba(255,255,255,0);
+        z-index: -2;
+        }
+}
+
+
+
+
+
+/****** mobile: header  ******/
+
+.header{
+
+    &__restaurantNav{
+    padding: 15px 30px 15px 30px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+        &__previousIcon{
+        font-size: 20px;
+        color: var(--dark-font-color);
+        }
+        &__logo{
+            width: 160px;
+            margin: auto;
+            }
+    }
+
+    &__banner__restaurantWindow{
+        object-fit: cover;
+        width: 100%;
+        height: 200px; 
+        }
+
+}
+
+
+/* #logo:hover{
+    transition: all 1s;
+    transform: scale(1.2);
+    filter: opacity(.7)
+} */
+/****** mobile: section restaurantMenu ******/
+
+.subHeader{
+    position: relative;
+}
+
+.restaurantMenu{
+    margin-top:-26px;
+    left: 0;
+    right: 0;
+    border-radius: 25px 25px 0 0;
+    padding: 35px 15px;
+    background-color: var(--main-bg-color);
+
+}
+
+.restaurantTitle{
+    position:relative;
+    padding-right: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    font-family: "Shrikhand", cursive;
+    font-weight: 100;
+    font-size: 1.73rem;
+}
+
+.heartBox{    
+    position: relative; 
+    right: 35px;
+    font-size: 25px;
+}
+
+.restaurantName{
+    font-family: 'Shrikhand', cursive;
+}
+
+
+/****** mobile: sections entrées /plats / desserts ******/
+
+/**fadding plats */
+
+article:nth-child(1){
+    animation: articlesAnim  .3s ;
+    animation-fill-mode: backwards;
+}
+article:nth-child(2){
+    animation: articlesAnim  .3s .2s ;
+    animation-fill-mode: backwards;
+}
+article:nth-child(3){
+    animation: articlesAnim .1s .3s;
+    animation-fill-mode: backwards;
+}
+article:nth-child(4){
+    animation: articlesAnim .05s .35s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes articlesAnim {
+   0%{
+    opacity: .2;
+    transform: scale(.5);
+   }
+ 
+    80%{opacity: 0.5;
+}
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/** mobile: section Menu */
+
+.dishesType{
+    padding: 10px 0;
+    text-transform:uppercase;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--semi-dark-font-color);
+}
+
+.titleUnderline{
+    border-bottom: solid 4px var(--tertiary-color);
+    padding: 0 0 10px 0;
+}
+
+.dishesList{
+    padding: 25px 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+    .dishCard{
+        position: relative;
+        border-style: none;
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+.dishDescription{
+    width: calc(100% - 55px);
+    padding: 10px  0 10px 10px;   
+}
+
+.dishName, .dishAccompaniments{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.dishDescription{
+    width: calc(100% - 55px);
+    padding: 10px  0 10px 10px;   
+}
+
+.dishCard:hover .dishDescription {
+    animation: textReduction 0.3s linear ;
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes textReduction {
+    from{
+        width: calc(100% - 55px);
+    }
+    to{
+        width: calc(100% - 120px);
+    } 
+}
+ 
+
+.dishCard:hover .dishPriceAndCheckBtn{
+    animation: priceAndCheckBtnTranslate 0.3s .05s linear;
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes priceAndCheckBtnTranslate {
+    100%{ transform: translateX(-65px); }
+}
+
+
+.dishName{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dishAccompaniments{    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dishPriceAndCheckBtn{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    top:0;
+    bottom: 0;
+    right: -65px;
+    align-items: end;
+}
+
+.dishPrice{
+    width: 45px;
+    padding: 0 0 10px 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.checkButton{
+    position: relative;
+    display:flex ;
+    justify-content:center; 
+    align-items: center;
+    height: 100%;
+    width: 65px;
+    border-radius: 0 15px 15px 0;
+    background-color: var(--tertiary-color);
+}
+
+.checkBox{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/** mobile: clics sur check  **/
+
+.fa-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: white;
+}
+
+.fa-check{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color:var(--tertiary-color)
+}
+
+
+/****** mobile: Section Commander */
+
+.command{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.command button{
+    width: 180px;
+}
+
+
+
+/******* mobile: footer ******/
+
+/* footer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: var(--semi-dark-bg-color);    
+}
+
+footer h2{
+    padding: 10px 0;
+    font-family: 'Shrikhand', cursive;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.footerBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerItem{
+    display:flex;
+    align-items: center;
+    padding: 2px 1px;
+}
+
+.footerItem i{ 
+    color: var(--clear-font-color);
+} */
+
+
+
+
+
+
+
+/***===========================================
+***   desktop  
+===============================================*/
+@media (min-width: 1024px) {
+
+/******  desktop: header   ******/
+
+    nav{
+        padding: 25px 30px 30px 25px;
+    }
+
+    #logo{
+        width:unset;
+    }
+
+    .banner img{
+        height:385px;
+    }
+
+
+
+    /** desktop: subHeader */
+
+    .subHeader{
+        max-width: 1050px;
+        margin: auto;
+    }
+
+    .restaurantMenu{
+        padding: 60px 205px 60px 205px; 
+    }
+
+    .restaurantTitle{
+        justify-content: center;
+    }
+
+    .restaurantTitle>.heartBox {
+        right: 0;
+        padding: 0 45px;
+    }
+
+
+}
