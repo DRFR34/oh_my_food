@@ -1,10 +1,11 @@
 
-/****** Général *******/
+/*** Général ***/
+
 @use "variables";
 @import url(global_styles.css);
 @import url(loader.css);
 
-// test
+
 $main-font-color: #000000;
 $tertiary-color: #99E2D0;
 $flat-graphics-main-color: #949292;
@@ -19,15 +20,22 @@ $clear-font-color: #FFFFFF;
 $dark-font-color: #000000;
 $semi-dark-font-color: #353535;
 
-//***** mobile: header *****
+/*** header ***/
 
 .header{
     padding: 30px 0;
     text-align: center;
+    @media screen and (min-width: 1440px){
+        padding: 0;
+    }
         .logo{
         width: 160px;
         margin:auto;  
-        padding: 0 0 10px 0;  
+        padding: 0 0 10px 0; 
+        @media screen and (min-width: 1440px){
+            width: 200px;
+            padding: 25px 0;
+        } 
         }
         &__locationSearch{
             height: 46px;
@@ -37,6 +45,9 @@ $semi-dark-font-color: #353535;
             display: flex;
             justify-content: center;
             align-items: center;
+            @media screen and (min-width: 1440px){
+                border: none;
+            }
 
             &__searchField{
                 
@@ -69,6 +80,9 @@ $semi-dark-font-color: #353535;
                 width: 80%;
                 margin: auto;
                 padding: 0 0 10px 0;
+                @media screen and (min-width: 1440px){
+                    font-size: 40px;
+                }
             }
 
             p{
@@ -78,44 +92,58 @@ $semi-dark-font-color: #353535;
         }
 }
 
+/*** positionnement des coeurs ***/
 
+.heartBox{ 
+    bottom: 55px;
+    right: 40px;
+}
 
-//*** mobile: section Fonctionnement (howTo) ***
+/*** section Fonctionnement (howTo) ***/
 
-
+@media screen and (min-width: 1440px){}
 
 .howTo{
-    // background-color: rgb(217, 255, 0);
     padding: 20px;
+    @media screen and (min-width: 1440px){
+        padding: 30px 200px;
+    }
 
     h2{
         padding: 30px 0;
-        // color: rgb(255, 0, 34);
     }
 
-    &__List{
-        // border: 1px solid red;
+    &__list{
         padding: 30px 0 50px;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @media screen and (min-width: 1024px){
+            flex-direction: row;
+            justify-content: space-between;
+        }
         
-        &__Item{
+        &__item{
             list-style-type: none;
             border-radius: 20px;
             padding: 25px;
             background-color: $secondary-bg-color;    
             font-weight: 500;
+            @media screen and (min-width: 1024px){
+                width: 370px;
+                font-weight: 600;
 
-            
+                p{
+                    font-weight: 500;
+                }
+            }            
         
-                &__Content{
-                    // background-color: rgb(196, 255, 204); 
+                &__content{ 
                     position: relative;
                     display: flex;
                     align-items: center;
                     
-                    &__Number{
+                    &__number{
                         position: absolute;
                         left: -35px;
                         width: 22px;
@@ -129,13 +157,13 @@ $semi-dark-font-color: #353535;
                         color: $clear-font-color;
                     }
 
-                    &__IconBox{
+                    &__iconBox{
                         padding: 0 15px 0 0;
                     }
                 }   
         }
 
-        &__Item:hover{
+        &__item:hover{
             transform: scaleY(1.1);
             i{
                 color: $primary-color;
@@ -148,22 +176,38 @@ $semi-dark-font-color: #353535;
 
 
 
-/*** mobile: section Restaurants ***/
+/*** section Restaurants ***/
 
 .restaurants{
     padding: 50px 20px;
     background-color:$secondary-bg-color;
+    @media screen and (min-width: 1440px){
+        padding: 50px 180px 0;
+    }
     
         &__cardsList{
         padding: 25px 0;
-    display: grid;
+        display: grid;
         grid-template-columns: 1fr;
         gap: 18px;
+        @media screen and (min-width: 1440px){
+            padding:30px 0;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
 
             &__card{
                 position:relative;
                 background-color: $clear-font-color;
                 border-radius: 10px;
+                @media screen and (min-width: 1024px){
+                    width: 700px;
+                    margin:auto;
+                }
+                @media screen and (min-width: 1440px){
+                    width: 490px;
+                }
+
                     &__link__window{
                         border-radius: 10px 10px 0 0 ;
                         width:100%;
@@ -193,75 +237,73 @@ $semi-dark-font-color: #353535;
 
 
 
-.heartBox{ 
-    bottom: 55px;
-    right: 40px;
-}
-
 
 
 //*************************************************
 //**** version desktop ****
 //**************************************************
 
-@media screen and (min-width: 1024px){
+// @media screen and (min-width: 1440px){}
 
-    //****** desktop: général ******
+// @media screen and (min-width: 1440px){
+
+//     //****** desktop: général ******
     
 
-    //****** dexktop: header *******
-    header{
-        padding: 0;
-    }
-    .logo{
-        width: 200px;
-        padding: 25px 0;
-    }
+//     //****** dexktop: header *******
+//     // .header{
+//     //     padding: 0;
 
-    .locationSearch{
-        border: none;
-    }
+//     // }
+//     .logo{
+//         width: 200px;
+//         padding: 25px 0;
+//     }
 
-    h1{
-        font-size: 40px;
-    }
+//     .locationSearch{
+//         border: none;
+//     }
 
-    //*** desktop: section Fonctionnement (howTo) ***
+//     h1{
+//         font-size: 40px;
+//     }
 
-    #howTo{
-        padding: 30px 200px;
-    }
+//     //*** desktop: section Fonctionnement (howTo) ***
+
+//     #howTo{
+//         padding: 30px 200px;
+//     }
     
-    .howToList{
+//     .howToList{
         
-        flex-direction: row;
-        justify-content: space-between;
-    }
+//         flex-direction: row;
+//         justify-content: space-between;
+//     }
 
-    .howToListItem{
-        width: 370px;
-        font-weight: 600;
-    }
+//     .howToListItem{
+//         width: 370px;
+//         font-weight: 600;
+//     }
 
-    .howToListItem p{
+//     .howToListItem p{
        
-        font-weight: 500;
-    }
+//         font-weight: 500;
+//     }
 
-    //*** desktop: section Restaurants ***
+//     //*** desktop: section Restaurants ***
 
-    #restaurants{
-        padding: 50px 180px 0;
-    }
+//     #restaurants{
+//         padding: 50px 180px 0;
+//     }
 
-    .restaurantsCardsList{
-        padding:30px 0;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px; 
-    }
+//     .restaurantsCardsList{
+//         padding:30px 0;
+//         grid-template-columns: 1fr 1fr;
+//         gap: 50px; 
+//     }
 
-    .restaurantCard{
-        width: 490px;
-    }
+//     .restaurantCard{
+//         width: 490px;
+//     }
 
-}
+// }
