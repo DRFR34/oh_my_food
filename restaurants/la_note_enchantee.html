@@ -6,20 +6,20 @@
     <title>La note enchantée</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="https://kit.fontawesome.com/64a15eb5cd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../CSS/restaurants_style.css" >
+    <link rel="stylesheet" href="../Sass/restaurants_style.css" >
 </head>
 
 <body>
     <div class="fadingRestaurant"></div>
-    <header>
-        <nav class=""restaurant-nav>            
-            <a href="../index.html">
-                <i class="previousIcon fa-solid fa-arrow-left "></i>
-            </a>            
-            <img id="logo" src="../images/logo/ohmyfood@2x.svg" alt="Logo Oh my food">
-        </nav>     
-        <div class="banner">
-            <img src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Un plat du restaurant" class="restaurant-window">
+    <header class=".header">
+        <nav class="header__restaurantNav">            
+                <a href="../index.html">
+                    <i class="header__restaurantNav__previousIcon fa-solid fa-arrow-left "></i>
+                </a>            
+                <img class="header__restaurantNav__logo" src="../images/logo/ohmyfood@2x.svg" alt="Logo Oh my food">
+        </nav>    
+        <div class="header__banner">
+            <img class="header__banner__restaurantWindow" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Un plat du restaurant">
         </div>      
     </header>
     <main>
@@ -37,8 +37,8 @@
                     <div class="dishesList">
                         <article class="dishCard boxShadow"> 
                             <div class="dishDescription">
-                                <h3 class="dishName">Ravioles de foie gras </h3>
-                                <p class="dishAccompaniments">Accompagnées de leur crème à la truffe</p>
+                                <h3 class="dishName">Ravioles de foie gras</h3>
+                                <p class="dishAccompaniments">ccompagnées de leur crème à la truffe</p>
                             </div>
                             <div class="dishPriceAndCheckBtn">
                                 <p class="dishPrice">25€</p>
@@ -48,11 +48,11 @@
                                         <i class="checkedIcon fa-solid fa-check"></i>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </article>
                         <article class="dishCard boxShadow"> 
                             <div class="dishDescription">
-                                <h3 class="dishName">Caviar osciètre </h3>
+                                <h3 class="dishName">Caviar osciètre</h3>
                                 <p class="dishAccompaniments">Sur blini à la farine de blé noir</p>
                             </div>
                             <div class="dishPriceAndCheckBtn">
@@ -63,7 +63,7 @@
                                         <i class="checkedIcon fa-solid fa-check"></i>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </article>
                         <article class="dishCard boxShadow"> 
                             <div class="dishDescription">
@@ -78,7 +78,7 @@
                                         <i class="checkedIcon fa-solid fa-check"></i>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </article>
                         <article class="dishCard boxShadow"> 
                             <div class="dishDescription">
@@ -93,13 +93,13 @@
                                         <i class="checkedIcon fa-solid fa-check"></i>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </article>
                     </div>
                 </section>
                 <section class="main-courses">
                     <h2 class="dishesType"><span class="titleUnderline">plat</span>s</h2>
-                    <div class="dishesList">
+                    <div class="dishesList">                        
                         <article class="dishCard boxShadow"> 
                             <div class="dishDescription">
                                 <h3 class="dishName">Noix de coquilles Saint-Jacques</h3>
@@ -130,9 +130,9 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="dishCard boxShadow"> 
+                        <article class="dishCard boxShadow">
                             <div class="dishDescription">
-                                <h3 class="dishName">Mijoté de queue de bœuf </h3>
+                                <h3 class="dishName">Mijoté de queue de bœuf</h3>
                                 <p class="dishAccompaniments">Et riz sauvage aux zestes de citron</p>
                             </div>
                             <div class="dishPriceAndCheckBtn">
@@ -143,8 +143,8 @@
                                         <i class="checkedIcon fa-solid fa-check"></i>
                                     </div>
                                 </div>
-                            </div> 
-                        </article> 
+                            </div>
+                        </article>
                     </div>
                 </section>
                 <section class="desserts">
@@ -165,9 +165,9 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="dishCard boxShadow"> 
+                        <article class="dishCard boxShadow">
                             <div class="dishDescription">
-                                <h3 class="dishName">Baba au rhum revisité </h3>
+                                <h3 class="dishName">Baba au rhum revisité</h3>
                                 <p class="dishAccompaniments">Avec son coulis de citron</p>
                             </div>
                             <div class="dishPriceAndCheckBtn">
@@ -182,7 +182,7 @@
                         </article>
                         <article class="dishCard boxShadow"> 
                             <div class="dishDescription">
-                                <h3 class="dishName">Tarte au citron meringuée </h3>
+                                <h3 class="dishName">Tarte au citron meringuée</h3>
                                 <p class="dishAccompaniments">Déstructurée</p>
                             </div>
                             <div class="dishPriceAndCheckBtn">
@@ -203,7 +203,6 @@
             </section> 
         </div>
     </main>    
-
     <footer class="footer">
         <h2>ohmyfood</h2>        
         <div class="footer__box">            

@@ -274,36 +274,6 @@ article:nth-child(4) {
   width: 180px;
 }
 
-/******* mobile: footer ******/
-/* footer{
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-    background-color: var(--semi-dark-bg-color);    
-}
-
-footer h2{
-    padding: 10px 0;
-    font-family: 'Shrikhand', cursive;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-
-.footerBox{
-    display: flex;
-    flex-direction: column;
-}
-
-.footerItem{
-    display:flex;
-    align-items: center;
-    padding: 2px 1px;
-}
-
-.footerItem i{ 
-    color: var(--clear-font-color);
-} */
 /***===========================================
 ***   desktop  
 ===============================================*/

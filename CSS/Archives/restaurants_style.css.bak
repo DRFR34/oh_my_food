@@ -3,6 +3,9 @@
 
 
 
+  
+
+
 .fadingRestaurant{
     z-index: -2;
     position: fixed;
@@ -11,7 +14,7 @@
     width:100%;
     height:100%; 
     background-color: rgba(255,255,255,0);
-    animation: fadingRestaurantAnim .3s ease-out; 
+    animation: fadingRestaurantAnim 1s ease-out; 
     animation-fill-mode: backwards; 
     animation-iteration-count: 1;
 }
@@ -33,42 +36,64 @@
 }
 
 
+/* ***** fadding plats
+
+article:nth-child(1){
+    animation: articlesAnim  4s ;
+    animation-fill-mode: backwards;
+}
+article:nth-child(2){
+    animation: articlesAnim  3s 2s ;
+    animation-fill-mode: backwards;
+}
+article:nth-child(3){
+    animation: articlesAnim 1s 3s;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes articlesAnim {
+   0%{
+    opacity: .2;
+    transform: scale(.5);
+   }
+ 
+    80%{opacity: 0.5;
+}
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+} */
+
 
 
 
 /****** mobile: header  ******/
 
-.header{
-
-    &__restaurantNav{
-    padding: 15px 30px 15px 30px;
+nav{
+    padding: 25px 60px 25px 60px;
     display: flex;
-    justify-content:flex-start;
-    align-items: center;
-        &__previousIcon{
-        font-size: 20px;
-        color: var(--dark-font-color);
-        }
-        &__logo{
-            width: 160px;
-            margin: auto;
-            }
-    }
-
-    &__banner__restaurantWindow{
-        object-fit: cover;
-        width: 100%;
-        height: 200px; 
-        }
-
+    justify-content: space-between;
 }
 
 
-/* #logo:hover{
+.previousIcon, .nextIcon{
+    font-size: 40px;
+    color: var(--dark-font-color);
+}
+.restaurant-window{
+    object-fit: cover;
+    width: 100%;
+    height: 200px; 
+}
+
+#logo:hover{
     transition: all 1s;
     transform: scale(1.2);
     filter: opacity(.7)
-} */
+}
 /****** mobile: section restaurantMenu ******/
 
 .subHeader{
@@ -93,14 +118,15 @@
 }
 
 h1{
-    font-family: "Shrikhand", cursive;
-    font-weight: 100;
+    font-family: Shrikhand;
+    font-weight: 300;
     font-size: 1.73rem;
+
 }
 
 .heartBox{    
     position: relative; 
-    right: 35px;
+    right: 15px;
     font-size: 25px;
 }
 
@@ -114,19 +140,19 @@ h1{
 /**fadding plats */
 
 article:nth-child(1){
-    animation: articlesAnim  .3s ;
+    animation: articlesAnim  3s ;
     animation-fill-mode: backwards;
 }
 article:nth-child(2){
-    animation: articlesAnim  .3s .2s ;
+    animation: articlesAnim  3s 2s ;
     animation-fill-mode: backwards;
 }
 article:nth-child(3){
-    animation: articlesAnim .1s .3s;
+    animation: articlesAnim 1s 3s;
     animation-fill-mode: backwards;
 }
 article:nth-child(4){
-    animation: articlesAnim .05s .35s;
+    animation: articlesAnim .5s 3.5s;
     animation-fill-mode: backwards;
 }
 
@@ -168,16 +194,18 @@ article:nth-child(4){
     gap: 20px;
 }
 
-    .dishCard{
-        position: relative;
-        border-style: none;
-        border-radius: 15px;
-        background-color: white;
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        overflow: hidden;
-    }
+.customCheck{
+    
+    position: relative;
+    border-style: none;
+    box-shadow: 0px 0px 10px 0px  rgba(236, 234, 234, 0.356);
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    overflow: hidden;
+}
 
 .dishDescription{
     width: calc(100% - 55px);
@@ -194,11 +222,11 @@ article:nth-child(4){
     padding: 10px  0 10px 10px;   
 }
 
-.dishCard:hover .dishDescription {
-    animation: textReduction 0.3s linear ;
+.customCheck:hover .dishDescription {
+    animation: textReduction 0.5s linear ;
     animation-fill-mode:forwards;
-}
 
+}
 
 @keyframes textReduction {
     from{
@@ -211,13 +239,36 @@ article:nth-child(4){
  
 
 .dishCard:hover .dishPriceAndCheckBtn{
-    animation: priceAndCheckBtnTranslate 0.3s .05s linear;
+    animation: priceAndCheckBtnTranslate 0.6s .1s linear;
     animation-fill-mode:forwards;
 }
 
 
 @keyframes priceAndCheckBtnTranslate {
     100%{ transform: translateX(-65px); }
+}
+
+.dishCard:hover .dishPriceAndCheckBtn .checkButton .fa-check{
+    animation: faCheckWarning  linear 2s 1;
+    animation-fill-mode:forwards;
+}
+
+@keyframes faCheckWarning{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 
@@ -269,6 +320,10 @@ article:nth-child(4){
     transform: translate(-50%, -50%);
 }
 
+.fa-circle-check, .fa-circle{
+    color: white;
+}
+
 
 /** mobile: clics sur check  **/
 
@@ -291,6 +346,31 @@ article:nth-child(4){
 }
 
 
+    .customCheck input {
+        display: none;
+    }
+ 
+    .customCheck input:checked ~ .dishPriceAndCheckBtn{
+        transform: translateX(-65px);
+
+    }
+
+    .customCheck input:checked ~ .dishDescription {
+        animation: textReduction 0s linear ;
+        animation-fill-mode:forwards;
+    
+    }
+
+    .customCheck input:checked ~ .dishPriceAndCheckBtn .checkButton .fa-circle {
+       animation: none;
+    }
+
+    .customCheck input:checked ~ .dishPriceAndCheckBtn .checkButton .fa-check {
+        animation: none;
+    }
+
+
+
 /****** mobile: Section Commander */
 
 .command{
@@ -305,7 +385,40 @@ article:nth-child(4){
 
 
 
+/******* mobile: footer ******/
 
+footer{
+    padding: 10px 20px;
+    background-color: var(--semi-dark-bg-color);    
+}
+footer *{    
+    color: var(--clear-font-color);
+    font-weight: 400;
+
+}
+footer h2{
+    padding: 10px 0;
+    font-family: 'Shrikhand', cursive;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footerBox a{
+    display: block;
+    padding: 2px 0;
+}
+.footerItem{
+    padding: 2px 0;
+}
+
+.footerItem{
+    display: flex;
+    align-items: center;
+}
+
+.footerIconBox{
+    padding: 0 10px 0 0;
+}
 
 
 
@@ -315,15 +428,6 @@ article:nth-child(4){
 @media (min-width: 1024px) {
 
 /******  desktop: header   ******/
-
-    nav{
-        padding: 25px 30px 30px 25px;
-    }
-
-    #logo{
-        width:unset;
-    }
-
     .banner img{
         height:385px;
     }
@@ -335,6 +439,7 @@ article:nth-child(4){
     .subHeader{
         max-width: 1050px;
         margin: auto;
+        /* padding: 60px 205px 60px 205px; */
     }
 
     .restaurantMenu{
@@ -348,6 +453,24 @@ article:nth-child(4){
     .restaurantTitle>.heartBox {
         right: 0;
         padding: 0 45px;
+    }
+
+    /**desktop: footer */
+
+    footer {
+        padding: 70px 80px 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    footer h2 {
+        padding: 0 0 10px 100px;
+    }
+
+    .footerBox{
+        display: flex;
+        flex-direction: row;
     }
 
 
