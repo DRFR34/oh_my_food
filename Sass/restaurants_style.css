@@ -27,8 +27,8 @@
     z-index: -2;
   }
 }
-/****** mobile: header  ******/
-.header__restaurantNav {
+/**  header   **/
+.header__restaurantNav { /** navigation **/
   padding: 15px 30px 15px 30px;
   display: flex;
   justify-content: flex-start;
@@ -42,24 +42,17 @@
   width: 160px;
   margin: auto;
 }
-.header__banner__restaurantWindow {
+.header__banner__restaurantWindow { /** photo "vitrine"  **/
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 200px;
 }
 
-/* #logo:hover{
-    transition: all 1s;
-    transform: scale(1.2);
-    filter: opacity(.7)
-} */
-/****** mobile: section restaurantMenu ******/
 .subHeader {
   position: relative;
 }
-
-.restaurantMenu {
+.subHeader__restaurantMenu { /** section restaurantMenu **/
   margin-top: -26px;
   left: 0;
   right: 0;
@@ -67,18 +60,97 @@
   padding: 35px 15px;
   background-color: var(--main-bg-color);
 }
-
-.restaurantTitle {
+.subHeader__restaurantMenu__restaurantTitle {
   position: relative;
   padding-right: 1px;
   display: flex;
   justify-content: space-between;
 }
-
-h1 {
+.subHeader__restaurantMenu__restaurantTitle__restaurantName {
   font-family: "Shrikhand", cursive;
   font-weight: 100;
   font-size: 1.73rem;
+}
+.subHeader__dishesType {
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--semi-dark-font-color);
+}
+.subHeader__dishesType__h2 {
+  color: red;
+}
+.subHeader__dishesType__h2--titleUnderline {
+  border-bottom: solid 4px var(--tertiary-color);
+  padding: 0 0 10px 0;
+}
+.subHeader__dishesType__dishesList {
+  padding: 25px 0 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.subHeader__dishesType__dishesList__dishCard {
+  position: relative;
+  border-style: none;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.subHeader__dishesType__dishesList__dishCard:hover h3 {
+  color: green;
+}
+.subHeader__dishesType__dishesList__dishCard:hover .subHeader__dishesType__dishesList__dishCard__dishDescription {
+  animation: textReduction 0.3s linear;
+  animation-fill-mode: forwards;
+}
+.subHeader__dishesType__dishesList__dishCard:hover .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn {
+  animation: priceAndCheckBtnTranslate 0.3s 0.05s linear;
+  animation-fill-mode: forwards;
+}
+.subHeader__dishesType__dishesList__dishCard__dishDescription {
+  width: calc(100% - 55px);
+  padding: 10px 0 10px 10px;
+}
+.subHeader__dishesType__dishesList__dishCard__dishDescription__dishName, .subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: -65px;
+  align-items: end;
+}
+.subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice {
+  width: 45px;
+  padding: 0 0 10px 0;
+  text-align: center;
+  font-weight: 700;
+}
+.subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 65px;
+  border-radius: 0 15px 15px 0;
+  background-color: var(--tertiary-color);
+}
+.subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .heartBox {
@@ -87,8 +159,15 @@ h1 {
   font-size: 25px;
 }
 
-.restaurantName {
-  font-family: "Shrikhand", cursive;
+/**  Commander **/
+.command {
+  width: 100%;
+  padding: 35px;
+  display: flex;
+  justify-content: center;
+}
+.command button {
+  width: 180px;
 }
 
 /****** mobile: sections entrées /plats / desserts ******/
@@ -127,58 +206,6 @@ article:nth-child(4) {
   }
 }
 /** mobile: section Menu */
-.dishesType {
-  padding: 10px 0;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 18px;
-  color: var(--semi-dark-font-color);
-}
-
-.titleUnderline {
-  border-bottom: solid 4px var(--tertiary-color);
-  padding: 0 0 10px 0;
-}
-
-.dishesList {
-  padding: 25px 0 25px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.dishCard {
-  position: relative;
-  border-style: none;
-  border-radius: 15px;
-  background-color: white;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.dishDescription {
-  width: calc(100% - 55px);
-  padding: 10px 0 10px 10px;
-}
-
-.dishName, .dishAccompaniments {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.dishDescription {
-  width: calc(100% - 55px);
-  padding: 10px 0 10px 10px;
-}
-
-.dishCard:hover .dishDescription {
-  animation: textReduction 0.3s linear;
-  animation-fill-mode: forwards;
-}
-
 @keyframes textReduction {
   from {
     width: calc(100% - 55px);
@@ -187,63 +214,11 @@ article:nth-child(4) {
     width: calc(100% - 120px);
   }
 }
-.dishCard:hover .dishPriceAndCheckBtn {
-  animation: priceAndCheckBtnTranslate 0.3s 0.05s linear;
-  animation-fill-mode: forwards;
-}
-
 @keyframes priceAndCheckBtnTranslate {
   100% {
     transform: translateX(-65px);
   }
 }
-.dishName {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.dishAccompaniments {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.dishPriceAndCheckBtn {
-  position: absolute;
-  display: flex;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  right: -65px;
-  align-items: end;
-}
-
-.dishPrice {
-  width: 45px;
-  padding: 0 0 10px 0;
-  text-align: center;
-  font-weight: 700;
-}
-
-.checkButton {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 65px;
-  border-radius: 0 15px 15px 0;
-  background-color: var(--tertiary-color);
-}
-
-.checkBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /** mobile: clics sur check  **/
 .fa-circle {
   position: absolute;
@@ -251,7 +226,7 @@ article:nth-child(4) {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 25px;
-  color: white;
+  color: red;
 }
 
 .fa-check {
@@ -260,24 +235,14 @@ article:nth-child(4) {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 16px;
-  color: var(--tertiary-color);
+  color: white;
 }
 
 /****** mobile: Section Commander */
-.command {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.command button {
-  width: 180px;
-}
-
 /***===========================================
 ***   desktop  
 ===============================================*/
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   /******  desktop: header   ******/
   nav {
     padding: 25px 30px 30px 25px;

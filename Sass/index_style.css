@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*** Général ***/
 @import url(global_styles.css);
-@import url(loader.css);
+@import url(/Sass/loader.css);
 /*** header ***/
 .header {
   padding: 30px 0;
