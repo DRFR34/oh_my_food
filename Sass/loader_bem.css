@@ -1,5 +1,5 @@
-@import url(global_styles.css);
-/****** mobile: loader ******/
+@import url(../Sass/global_styles.css);
+/****** loader ******/
 .loaderBg {
   z-index: 5;
   background-color: rgb(255, 255, 255);
@@ -13,32 +13,69 @@
 }
 .loaderBg__animContainer {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
   width: 320px;
   margin: auto;
-  height: 20px;
   transform: translateX(-50%);
 }
 .loaderBg__animContainer__txt {
-  transform: translateX(-9999px);
   color: transparent;
   position: absolute;
+  top: 135px;
+  left: 30px;
+  transform: translate(9000px, 100px);
   font-family: "Shrikhand", cursive;
-  font-size: 50px;
-  offset: path("M 0 91 C 27 94 54 114 83 183 C 113 113 140 147 163 184 C 173 157 182 177 189 185 L 197 186") 0deg;
-  offset: rotate(0);
+  font-size: 45px;
 }
 .loaderBg__animContainer__txt--ohColor {
-  color: #9356DC;
+  color: var(--primary-color);
 }
 .loaderBg__animContainer__txt--myColor {
-  color: #99E2D0;
+  color: var(--tertiary-color);
 }
 .loaderBg__animContainer__txt--foodColor {
-  color: #fa90f1;
+  color: var(--secondary-color);
+}
+.loaderBg__animContainer__txt span {
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+}
+.loaderBg__animContainer .oh {
+  animation: move1 2.4s linear, jumps 0.3s cubic-bezier(0, 100, 0.8, 100) 3;
+  animation-fill-mode: forwards;
+}
+.loaderBg__animContainer .my {
+  animation: move1 2s 0.5s, jumps 0.25s 0.5s cubic-bezier(0, 100, 0.8, 100) 3;
+  animation-fill-mode: forwards;
+}
+.loaderBg__animContainer .food {
+  animation: move1 1.5s 1s, jumps 0.3s 1s cubic-bezier(0, 100, 0.8, 100) 3;
+  animation-fill-mode: forwards;
+}
+.loaderBg__animContainer__plat, .loaderBg__animContainer__couvercle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* background-color: red; */
+  z-index: 5;
+  opacity: 1;
+  width: 350px;
+}
+.loaderBg__animContainer__plat {
+  width: 350px;
+  transform: translate(-50%, 190px);
+  animation: animPlat 2.8s ease-out;
+  animation-fill-mode: forwards;
+}
+.loaderBg__animContainer__couvercle {
+  width: 400px;
+  transform: translate(-50%, 0px);
+  animation: animCouvercle 3s ease-out;
+  animation-fill-mode: forwards;
 }
 
+/**  Keyframes **/
 @keyframes loaderRestaurantAnim {
   0% {
     z-index: 10;
@@ -48,7 +85,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 10;
   }
-  99.99% {
+  99.999% {
     background-color: rgba(255, 255, 255, 0.7);
     z-index: 10;
   }
@@ -57,136 +94,67 @@
     z-index: -2;
   }
 }
-span {
-  font-family: "Shrikhand", cursive;
-  font-size: 50px;
-}
-
-.oh {
-  animation: move1 1.5s 1.5s 1;
-  animation-fill-mode: forwards;
-}
-
-.my {
-  animation: move2 2s 1s;
-  animation-fill-mode: forwards;
-}
-
-.food {
-  animation: move3 2.5s 0.5s;
-  animation-fill-mode: forwards;
-}
-
-svg {
-  position: absolute;
-}
-
 @keyframes move1 {
   0% {
-    transform: translateX(-50px);
-  }
-  30% {
-    offset-distance: 100%;
-    transform: translateX(-35px);
-  }
-  99.999% {
-    offset-distance: 100%;
-    transform: translateX(-35px);
+    transform: translate(400px, 0px);
     opacity: 1;
-  }
-  100% {
-    offset-distance: 100%;
-    transform: translateX(-35px);
-    opacity: 0;
-    z-index: -2;
-  }
-}
-@keyframes move2 {
-  0% {
-    transform: translateX(-50px);
   }
   50% {
-    offset-distance: 100%;
-    transform: translateX(-35px);
+    transform: translate(0px, 0px);
   }
   99.999% {
-    offset-distance: 100%;
-    transform: translateX(-35px);
+    transform: translate(0px, 0px);
     opacity: 1;
   }
   100% {
-    offset-distance: 100%;
-    transform: translateX(-35px);
+    transform: translate(0px, 0px);
     opacity: 0;
     z-index: -2;
   }
 }
-@keyframes move3 {
+@keyframes jumps {
   0% {
-    transform: translateX(-50px);
-  }
-  50% {
-    offset-distance: 100%;
-    transform: translateX(-35px);
-  }
-  99.999% {
-    offset-distance: 100%;
-    transform: translateX(-35px);
-    opacity: 1;
+    top: 136px;
   }
   100% {
-    offset-distance: 100%;
-    transform: translateX(-35px);
-    opacity: 0;
-    z-index: -2;
+    top: 135px;
   }
 }
-#plat, #couvercle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 0.5;
-  width: 300px;
-}
-
-#plat {
-  transform: translate(-50%, 140%);
-  animation: animPlat 3s ease-out;
-  animation-fill-mode: forwards;
-}
-
-#couvercle {
-  transform: translate(-50%, 45%);
-  animation: animCouvercle 3s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
 @keyframes animCouvercle {
   25% {
-    transform: translate(-30%, -15%);
-    rotate: 35deg;
-    opacity: 0.5;
+    transform: translate(-70%, -165px) rotate(-35deg);
+    opacity: 1;
+    z-index: 10;
+  }
+  50.9% {
+    transform: translate(-70%, -165px) rotate(-35deg);
+    z-index: 10;
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, 0px) rotate(0deg);
+    opacity: 1;
+    z-index: 10;
   }
   99.99% {
-    transform: translate(-30%, -15%);
-    rotate: 35deg;
-    opacity: 0.5;
+    transform: translate(-50%, 0px) rotate(0deg);
+    z-index: 10;
+    /* opacity: 0.5; */
   }
   100% {
-    transform: translate(-30%, -15%);
-    rotate: 35deg;
+    transform: translate(-50%, 0px) rotate(0deg);
     opacity: 0;
     z-index: -2;
   }
 }
 @keyframes animPlat {
   99.99% {
-    transform: translate(-50%, 140%);
-    opacity: 0.5;
+    /* transform: translate(-50%, 140%); */
+    opacity: 1;
   }
   100% {
-    transform: translate(-50%, 140%);
+    /* transform: translate(-50%, 140%); */
     opacity: 0;
     z-index: -2;
   }
-}/*# sourceMappingURL=loader_bem.css.map */
+}/*# sourceMappingURL=loader_test2_bem.css.map */
