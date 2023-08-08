@@ -67,15 +67,15 @@ span{
 }
 
 .ohColor{
-    color: var(--primary-color);
+    color: red;
 }
 
 .myColor{
-    color: var(--tertiary-color);
+    color: blue;
 }
 
 .foodColor{
-    color: var(--secondary-color);
+    color: violet;
 }
 
 .oh{
