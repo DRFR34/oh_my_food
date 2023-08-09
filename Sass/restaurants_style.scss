@@ -1,19 +1,35 @@
 
 @import url(global_styles.css);
 
-$main-font-color: #000000;
-$tertiary-color: #99E2D0;
-$flat-graphics-main-color: #949292;
-$main-bg-color: #F3F3F3;
-$secondary-bg-color: #F6F6F6;
-$secondary-color: #fa90f1;
-$primary-color: #9356DC;
-$fields-bg-color:#EAEAEA;
-$semi-dark-bg-color:#353535;
-$tertiary-font-color: #008766;
-$clear-font-color: #FFFFFF;
-$dark-font-color: #000000;
-$semi-dark-font-color: #353535;
+// :root{
+//     --main-font-color: #000000;
+//     --tertiary-color: #99E2D0;
+//     --flat-graphics-main-color: #7E7E7E;
+//     --main-bg-color: #F3F3F3;
+//     --secondary-bg-color: #F6F6F6;
+//     --secondary-color: #fa90f1;
+//     --primary-color: #9356DC;
+//     --fields-bg-color:#EAEAEA;
+//     --semi-dark-bg-color:#353535;
+//     --tertiary-font-color: #008766;
+//     --clear-font-color: #FFFFFF;
+//     --dark-font-color: #000000;
+//     --semi-dark-font-color: #353535;
+//   }
+
+// $main-font-color: #000000;
+// $tertiary-color: #99E2D0;
+// $flat-graphics-main-color: #949292;
+// $main-bg-color: #F3F3F3;
+// $secondary-bg-color: #F6F6F6;
+// $secondary-color: #fa90f1;
+// $primary-color: #9356DC;
+// $fields-bg-color:#EAEAEA;
+// $semi-dark-bg-color:#353535;
+// $tertiary-font-color: #008766;
+// $clear-font-color: #FFFFFF;
+// $dark-font-color: #000000;
+// $semi-dark-font-color: #353535;
 
 .fadingRestaurant{
     z-index: -2;
@@ -116,7 +132,7 @@ $semi-dark-font-color: #353535;
         color: var(--semi-dark-font-color);
 
         &__h2{
-            color: red;
+            // color: red;
             &--titleUnderline {
             border-bottom: solid 4px var(--tertiary-color);
             padding: 0 0 10px 0;
@@ -139,9 +155,6 @@ $semi-dark-font-color: #353535;
                 justify-content: space-between;
                 overflow: hidden;
                 &:hover {
-                    h3{
-                        color: green;
-                    }
                     .subHeader__dishesType__dishesList__dishCard__dishDescription {
                         animation: textReduction 0.3s linear ;
                         animation-fill-mode:forwards;
@@ -398,8 +411,7 @@ article:nth-child(4){
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
-    // color: white;
-    color: red;
+    color: white;
 }
 
 .fa-check{
@@ -408,8 +420,7 @@ article:nth-child(4){
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 16px;
-    // color:var(--tertiary-color)
-    color: white;
+    color:var(--tertiary-color)
 }
 
 

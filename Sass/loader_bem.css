@@ -46,11 +46,11 @@
   animation-fill-mode: forwards;
 }
 .loaderBg__animContainer .my {
-  animation: move1 2s 0.5s, jumps 0.25s 0.5s cubic-bezier(0, 100, 0.8, 100) 3;
+  animation: move1 2s 0.5s, jumps 0.26s 0.5s cubic-bezier(0, 100, 0.8, 100) 3;
   animation-fill-mode: forwards;
 }
 .loaderBg__animContainer .food {
-  animation: move1 1.5s 1s, jumps 0.3s 1s cubic-bezier(0, 100, 0.8, 100) 3;
+  animation: move1 1.5s 0.8s, jumps 0.3s 1s cubic-bezier(0, 100, 0.8, 100) 3;
   animation-fill-mode: forwards;
 }
 .loaderBg__animContainer__plat, .loaderBg__animContainer__couvercle {
@@ -102,7 +102,7 @@
   50% {
     transform: translate(0px, 0px);
   }
-  99.999% {
+  99% {
     transform: translate(0px, 0px);
     opacity: 1;
   }
@@ -157,4 +157,4 @@
     opacity: 0;
     z-index: -2;
   }
-}/*# sourceMappingURL=loader_test2_bem.css.map */
+}/*# sourceMappingURL=loader_bem.css.map */

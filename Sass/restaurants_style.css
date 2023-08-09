@@ -78,9 +78,6 @@
   font-size: 15px;
   color: var(--semi-dark-font-color);
 }
-.subHeader__dishesType__h2 {
-  color: red;
-}
 .subHeader__dishesType__h2--titleUnderline {
   border-bottom: solid 4px var(--tertiary-color);
   padding: 0 0 10px 0;
@@ -100,9 +97,6 @@
   align-items: end;
   justify-content: space-between;
   overflow: hidden;
-}
-.subHeader__dishesType__dishesList__dishCard:hover h3 {
-  color: green;
 }
 .subHeader__dishesType__dishesList__dishCard:hover .subHeader__dishesType__dishesList__dishCard__dishDescription {
   animation: textReduction 0.3s linear;
@@ -226,7 +220,7 @@ article:nth-child(4) {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 25px;
-  color: red;
+  color: white;
 }
 
 .fa-check {
@@ -235,7 +229,7 @@ article:nth-child(4) {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 16px;
-  color: white;
+  color: var(--tertiary-color);
 }
 
 /****** mobile: Section Commander */

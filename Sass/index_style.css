@@ -1,11 +1,10 @@
 @charset "UTF-8";
 /*** Général ***/
 @import url(global_styles.css);
-/* @import url(/Sass/loader.css); */
-@import url(/Sass/loader_bem.css);
+@import url(loader_bem.css);
 /*** header ***/
 .header {
-  padding: 30px 0;
+  padding: 30px 0 0;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
@@ -27,7 +26,7 @@
 .header__locationSearch {
   height: 46px;
   border-top: solid 2px;
-  border-color: #949292;
+  border-color: #D9D9D9;
   background-color: #EAEAEA;
   display: flex;
   justify-content: center;
@@ -37,6 +36,9 @@
   .header__locationSearch {
     border: none;
   }
+}
+.header__locationSearch__locationIconBox__locationIcon {
+  color: #000000;
 }
 .header__locationSearch__searchField {
   width: 135px;
@@ -60,7 +62,8 @@
   padding: 0 15px 0 0;
 }
 .header__hero {
-  padding: 20px;
+  padding: 30px 20px 60px;
+  background-color: #F6F6F6;
 }
 .header__hero h1 {
   width: 80%;
@@ -92,10 +95,10 @@
   }
 }
 .howTo h2 {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 .howTo__list {
-  padding: 30px 0 50px;
+  padding: 20px 0 50px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -119,7 +122,7 @@
     font-weight: 600;
   }
   .howTo__list__item p {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 .howTo__list__item__content {
