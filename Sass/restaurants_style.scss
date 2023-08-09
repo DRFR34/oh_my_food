@@ -1,36 +1,6 @@
 
 @import url(global_styles.css);
 
-// :root{
-//     --main-font-color: #000000;
-//     --tertiary-color: #99E2D0;
-//     --flat-graphics-main-color: #7E7E7E;
-//     --main-bg-color: #F3F3F3;
-//     --secondary-bg-color: #F6F6F6;
-//     --secondary-color: #fa90f1;
-//     --primary-color: #9356DC;
-//     --fields-bg-color:#EAEAEA;
-//     --semi-dark-bg-color:#353535;
-//     --tertiary-font-color: #008766;
-//     --clear-font-color: #FFFFFF;
-//     --dark-font-color: #000000;
-//     --semi-dark-font-color: #353535;
-//   }
-
-// $main-font-color: #000000;
-// $tertiary-color: #99E2D0;
-// $flat-graphics-main-color: #949292;
-// $main-bg-color: #F3F3F3;
-// $secondary-bg-color: #F6F6F6;
-// $secondary-color: #fa90f1;
-// $primary-color: #9356DC;
-// $fields-bg-color:#EAEAEA;
-// $semi-dark-bg-color:#353535;
-// $tertiary-font-color: #008766;
-// $clear-font-color: #FFFFFF;
-// $dark-font-color: #000000;
-// $semi-dark-font-color: #353535;
-
 .fadingRestaurant{
     z-index: -2;
     position: fixed;
@@ -43,7 +13,6 @@
     animation-fill-mode: backwards; 
     animation-iteration-count: 1;
 }
-
 
 @keyframes fadingRestaurantAnim  {
     0% { 
@@ -59,10 +28,6 @@
         z-index: -2;
         }
 }
-
-
-
-
 
 /**  header   **/
 
@@ -94,7 +59,7 @@
 
 }
 
-
+/**  subHeader   **/
 
 .subHeader{
     position: relative;
@@ -109,7 +74,7 @@
 
             &__restaurantTitle{
                 position:relative;
-                padding-right: 1px;
+                padding: 0 0 20px 0;
                 display: flex;
                 justify-content: space-between;
                 
@@ -126,24 +91,23 @@
 
     &__dishesType {
         padding: 10px 0;
-        text-transform:uppercase;
-        font-weight: 300;
-        font-size: 15px;
         color: var(--semi-dark-font-color);
 
         &__h2{
-            // color: red;
+            text-transform:uppercase;
+            font-weight: 300;
+            font-size: 16px;
             &--titleUnderline {
-            border-bottom: solid 4px var(--tertiary-color);
-            padding: 0 0 10px 0;
+            border-bottom: solid 3px var(--tertiary-color);
+            padding: 0 0 5px 0;
         }
         }
 
         &__dishesList{
-            padding: 25px 0 25px 0;
+            padding: 20px 0 20px 0;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 10px;
 
             &__dishCard{
                 position: relative;
@@ -173,6 +137,7 @@
 
                     &__dishName, 
                     &__dishAccompaniments{
+                        line-height: 25px;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
@@ -222,6 +187,7 @@
 
 
 }
+
 .heartBox{    
     position: relative; 
     right: 35px;
@@ -231,7 +197,7 @@
 /**  Commander **/
 .command{
     width: 100%;
-    padding: 35px;
+    padding: 8px 0;
     display: flex;
     justify-content: center;
 
@@ -241,13 +207,7 @@
 }
 
 
-
-
-
-
-/****** mobile: sections entrées /plats / desserts ******/
-
-/**fadding plats */
+/** animation fadding plats */
 
 article:nth-child(1){
     animation: articlesAnim  .3s ;
@@ -281,58 +241,6 @@ article:nth-child(4){
     }
 }
 
-
-/** mobile: section Menu */
-
-// .dishesType{
-//     padding: 10px 0;
-//     text-transform:uppercase;
-//     font-weight: 300;
-//     font-size: 18px;
-//     color: var(--semi-dark-font-color);
-// }
-
-// .titleUnderline{
-//     border-bottom: solid 4px var(--tertiary-color);
-//     padding: 0 0 10px 0;
-// }
-
-// .dishesList{
-//     padding: 25px 0 25px 0;
-//     display: flex;
-//     flex-direction: column;
-//     gap: 20px;
-// }
-
-    // .dishCard{
-    //     position: relative;
-    //     border-style: none;
-    //     border-radius: 15px;
-    //     background-color: white;
-    //     display: flex;
-    //     align-items: end;
-    //     justify-content: space-between;
-    //     overflow: hidden;
-    // }
-
-// .dishDescription{
-//     width: calc(100% - 55px);
-//     padding: 10px  0 10px 10px;   
-// }
-
-// .dishName, .dishAccompaniments{
-//     white-space: nowrap;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-// }
-
-
-// .dishCard:hover .dishDescription {
-//     animation: textReduction 0.3s linear ;
-//     animation-fill-mode:forwards;
-// }
-
-
 @keyframes textReduction {
     from{
         width: calc(100% - 55px);
@@ -342,68 +250,10 @@ article:nth-child(4){
     } 
 }
  
-
-// .dishCard:hover .dishPriceAndCheckBtn{
-//     animation: priceAndCheckBtnTranslate 0.3s .05s linear;
-//     animation-fill-mode:forwards;
-// }
-
-
 @keyframes priceAndCheckBtnTranslate {
     100%{ transform: translateX(-65px); }
 }
 
-
-// .dishName{
-//     white-space: nowrap;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-// }
-
-// .dishAccompaniments{    
-//     white-space: nowrap;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-// }
-
-// .dishPriceAndCheckBtn{
-//     position: absolute;
-//     display: flex;
-//     height: 100%;
-//     top:0;
-//     bottom: 0;
-//     right: -65px;
-//     align-items: end;
-// }
-
-// .dishPrice{
-//     width: 45px;
-//     padding: 0 0 10px 0;
-//     text-align: center;
-//     font-weight: 700;
-// }
-
-
-// .checkButton{
-//     position: relative;
-//     display:flex ;
-//     justify-content:center; 
-//     align-items: center;
-//     height: 100%;
-//     width: 65px;
-//     border-radius: 0 15px 15px 0;
-//     background-color: var(--tertiary-color);
-// }
-
-// .checkBox{
-//     position: absolute;
-//     top: 50%;
-//     left:50%;
-//     transform: translate(-50%, -50%);
-// }
-
-
-/** mobile: clics sur check  **/
 
 .fa-circle{
     position: absolute;
@@ -424,64 +274,54 @@ article:nth-child(4){
 }
 
 
-/****** mobile: Section Commander */
-
-// .command{
-//     width: 100%;
-//     display: flex;
-//     justify-content: center;
-// }
-
-// .command button{
-//     width: 180px;
-// }
-
-
-
-
-
-
-
 /***===========================================
 ***   desktop  
 ===============================================*/
 @media (min-width: 1440px) {
 
-/******  desktop: header   ******/
+    /**desktop: header**/
+    .header{
+        &__restaurantNav{
+        padding: 30px 30px 30px 30px;
 
-    nav{
-        padding: 25px 30px 30px 25px;
+            &__logo{
+            width:unset;
+            }
+        }
+        &__banner{
+             &__restaurantWindow{
+                height:385px;
+            }
+        }
     }
-
-    #logo{
-        width:unset;
-    }
-
-    .banner img{
-        height:385px;
-    }
-
-
-
+  
     /** desktop: subHeader */
 
     .subHeader{
         max-width: 1050px;
         margin: auto;
+        
+        &__restaurantMenu{
+            margin-top:-40px;
+        padding: 60px 205px 60px 205px;
+        border-radius: 40px 40px 0 0; 
+        
+            &__restaurantTitle{                
+                justify-content: center;
+                
+                .heartBox {
+                right: 0;
+                padding: 0 45px;
+                }
+            }
+        }
     }
 
-    .restaurantMenu{
-        padding: 60px 205px 60px 205px; 
-    }
+    
 
-    .restaurantTitle{
-        justify-content: center;
-    }
+    
 
-    .restaurantTitle>.heartBox {
-        right: 0;
-        padding: 0 45px;
-    }
+    
 
 
 }
