@@ -52,7 +52,8 @@ body{
   
 a{
     text-decoration:none;
-    color: $dark-font-color;
+    // color: $dark-font-color;
+    color: black;
 }
 
 p{
@@ -144,7 +145,7 @@ p{
     padding: 10px 20px;
     background-color: $semi-dark-bg-color;
     @media (min-width: 1024px) {
-        padding: 70px 80px 20px;
+        padding: 60px 80px 20px;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
