@@ -35,7 +35,7 @@
 
     
     &__restaurantNav{/** navigation **/
-    padding: 15px 30px 15px 30px;
+    padding: 20px 30px 15px 30px;
     display: flex;
     justify-content:flex-start;
     align-items: center;
@@ -69,12 +69,12 @@
         left: 0;
         right: 0;
         border-radius: 40px 40px 0 0;
-        padding: 35px 15px;
+        padding: 32px 15px;
         background-color: $main-bg-color;
 
             &__restaurantTitle{
                 position:relative;
-                padding: 0 0 20px 0;
+                padding: 0 0 18px 0;
                 display: flex;
                 justify-content: space-between;
                 
@@ -113,7 +113,7 @@
             padding: 20px 0 20px 0;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 11px;
 
             &__dishCard{
                 position: relative;
@@ -200,7 +200,7 @@
 /**  Commander **/
 .command{
     width: 100%;
-    padding: 8px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
 
