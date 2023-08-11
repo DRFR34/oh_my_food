@@ -1,8 +1,8 @@
 
-@import url(../Sass/global_styles.css);
+@import "global_styles";
 
 
-/****** loader ******/
+/****** loader ******/    
 
 .loaderBg{
     z-index: 5;
@@ -34,14 +34,14 @@
             font-size:45px;
 
             &--ohColor{
-                color: var(--primary-color);
+                color: $primary-color;
             }
 
             &--myColor{
-                color: var(--tertiary-color);
+                color: $tertiary-color;
             }
             &--foodColor{
-                color: var(--secondary-color);
+                color: $secondary-color;
             }
 
             span{
@@ -92,7 +92,7 @@
         }
     }
 }
-
+     
 /**  Keyframes **/
 
 @keyframes loaderRestaurantAnim  {

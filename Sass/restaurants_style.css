@@ -1,4 +1,146 @@
-@import url(global_styles.css);
+@charset "UTF-8";
+/**==============================================
+**     GENERAL
+**==================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+/*** Eléments généraux***/
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.fa-solid, .fa-regular {
+  color: #D9D9D9;
+  font-size: 18px;
+}
+
+.boxShadow {
+  box-shadow: 3px 3px 11px 2px rgba(33, 33, 33, 0.15);
+}
+.boxShadow:hover {
+  box-shadow: 3px 3px 15px 2px rgba(33, 33, 33, 0.3);
+}
+
+/****** Boutons principaux  ******/
+.mainBtn {
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(252, 252, 252, 0.24);
+  border-radius: 50px;
+  padding: 15px;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.mainBtn:hover {
+  transition: 0.3s;
+  filter: brightness(1.13);
+  box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
+}
+
+/****** Coeurs ******/
+.heartBox {
+  position: absolute;
+}
+.heartBox .heartEmpty {
+  color: #353535;
+}
+.heartBox .heartFilled {
+  transform: translateX(-50%) translateY(-50%) scale(0);
+}
+.heartBox:hover .heartFilled {
+  z-index: 2;
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  transition: 0.3s;
+  background: -webkit-linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heartEmpty, .heartFilled {
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/******* footer ******/
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  background-color: #353535;
+}
+@media (min-width: 1024px) {
+  .footer {
+    padding: 60px 50px 20px 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+.footer * {
+  color: #FFFFFF;
+}
+.footer h2 {
+  padding: 10px 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .footer h2 {
+    padding: 0 0 10px 100px;
+  }
+}
+.footer__box {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .footer__box {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.footer__box__item {
+  display: flex;
+  align-items: center;
+  padding: 2px 1px;
+}
+@media (min-width: 1024px) {
+  .footer__box__item {
+    padding: 2px 15px;
+    color: #FFFFFF;
+    font-weight: 400;
+  }
+}
+.footer__box__item__iconBox {
+  padding: 0 10px 0 0;
+}
+.footer__box__item__iconBox__icon {
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
 .fadingRestaurant {
   z-index: -2;
   position: fixed;
@@ -35,7 +177,7 @@
 }
 .header__restaurantNav__previousIcon {
   font-size: 20px;
-  color: var(--dark-font-color);
+  color: #000000;
 }
 .header__restaurantNav__logo {
   width: 160px;
@@ -58,7 +200,7 @@
   right: 0;
   border-radius: 25px 25px 0 0;
   padding: 35px 15px;
-  background-color: var(--main-bg-color);
+  background-color: #F3F3F3;
 }
 .subHeader__restaurantMenu__restaurantTitle {
   position: relative;
@@ -73,7 +215,7 @@
 }
 .subHeader__dishesType {
   padding: 10px 0;
-  color: var(--semi-dark-font-color);
+  color: #353535;
 }
 .subHeader__dishesType__h2 {
   text-transform: uppercase;
@@ -81,7 +223,7 @@
   font-size: 16px;
 }
 .subHeader__dishesType__h2--titleUnderline {
-  border-bottom: solid 3px var(--tertiary-color);
+  border-bottom: solid 3px #99E2D0;
   padding: 0 0 5px 0;
 }
 .subHeader__dishesType__dishesList {
@@ -141,7 +283,7 @@
   height: 100%;
   width: 65px;
   border-radius: 0 15px 15px 0;
-  background-color: var(--tertiary-color);
+  background-color: #99E2D0;
 }
 .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox {
   position: absolute;
@@ -229,7 +371,7 @@ article:nth-child(4) {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 16px;
-  color: var(--tertiary-color);
+  color: #99E2D0;
 }
 
 /***===========================================

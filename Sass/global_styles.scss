@@ -1,81 +1,7 @@
 /**==============================================
 **     GENERAL
 **==================================================*/
-
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-
-/*** VARIABLES ****/
-// $main-font-color: (--main-font-color: #000000);
-// $tertiary-color: (--tertiary-color: #99E2D0);
-// $flat-graphics-main-color: (--flat-graphics-main-color: #D9D9D9);
-// $main-bg-color: (--main-bg-color: #F3F3F3);
-// $secondary-bg-color: (--secondary-bg-color: #F6F6F6);
-// $secondary-color: (--secondary-color: #FF79DA);
-// $primary-color: (--primary-color: #9356DC);
-// $fields-bg-color:(--fields-bg-color:#EAEAEA);
-// $semi-dark-bg-color:(--semi-dark-bg-color:#353535);
-// $tertiary-font-color: (--tertiary-font-color: #008766);
-// $clear-font-color: (--clear-font-color: #FFFFFF);
-// $dark-font-color: (--dark-font-color: #000000);
-// $semi-dark-font-color: (--semi-dark-font-color: #353535);
-
-// :root{
-//     $main-font-color: (--main-font-color: #000000);
-//     $tertiary-color: (--tertiary-color: #99E2D0);
-//     $flat-graphics-main-color: (--flat-graphics-main-color: #D9D9D9);
-//     $main-bg-color: (--main-bg-color: #F3F3F3);
-//     $secondary-bg-color: (--secondary-bg-color: #F6F6F6);
-//     $secondary-color: (--secondary-color: pink);
-//     $primary-color: (--primary-color: #9356DC);
-//     $fields-bg-color:(--fields-bg-color:#EAEAEA);
-//     $semi-dark-bg-color:(--semi-dark-bg-color:#353535);
-//     $tertiary-font-color: (--tertiary-font-color: #008766);
-//     $clear-font-color: (--clear-font-color: #FFFFFF);
-//     $dark-font-color: (--dark-font-color: #000000);
-//     $semi-dark-font-color: (--semi-dark-font-color: #353535);
-// }
-
-:root{
-$main-font-color: #000000;
-$tertiary-color:  #99E2D0;
-$flat-graphics-main-color: #D9D9D9;
-$main-bg-color: #F3F3F3;
-$secondary-bg-color: #F6F6F6;
-$secondary-color: #FF79DA;
-$primary-color: #9356DC;
-$fields-bg-color:#EAEAEA;
-$semi-dark-bg-color:#353535;
-$tertiary-font-color: #008766;
-$clear-font-color: #FFFFFF;
-$dark-font-color: #000000;
-$semi-dark-font-color: #353535;
-
-    --main-font-color: #000000;
-    --tertiary-color: #99E2D0;
-    --flat-graphics-main-color: #7E7E7E;
-    --main-bg-color: #F3F3F3;
-    --secondary-bg-color: #F6F6F6;
-    --secondary-color: #FF79DA;
-    --primary-color: #9356DC;
-    --fields-bg-color:#EAEAEA;
-    --semi-dark-bg-color:#353535;
-    --tertiary-font-color: #008766;
-    --clear-font-color: #FFFFFF;
-    --dark-font-color: #000000;
-    --semi-dark-font-color: #353535;
-  }
-
-
-//*** EXTENSIONS ***
-
-%centered{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"),"variables";
 
 
 
@@ -95,8 +21,7 @@ body{
   
 a{
     text-decoration:none;
-    // color: $dark-font-color;
-    color: black;
+    color: $dark-font-color;
 }
 
 p{
@@ -105,7 +30,7 @@ p{
 }
 
 .fa-solid, .fa-regular{
-    color: var(--flat-graphics-main-color);
+    color: $flat-graphics-main-color;
     font-size: 18px;
 }
 
@@ -126,7 +51,7 @@ p{
     box-shadow: 0px 0px 10px 0px  rgba(252, 252, 252, 0.24);
     border-radius: 50px;
     padding: 15px;
-    background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100% );
+    background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100% );
     font-size: 16px;
     font-weight: 500;
     color: $clear-font-color;
@@ -140,12 +65,20 @@ p{
 }
 
 
-
 /****** Coeurs ******/
 
 .heartBox{    
     position: absolute; 
-    font-size: 30px;
+
+    .heartEmpty{
+        color: $semi-dark-font-color;
+    }
+
+    .heartFilled{
+    transform: translateX(-50%) translateY(-50%) scale(0.0);
+    }
+
+
 
     &:hover{ 
         .heartFilled {
@@ -156,24 +89,23 @@ p{
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+
         }
     }
 }
 
 .heartEmpty, .heartFilled{
-    font-size: 30px;
-    @extend %centered
+    font-size: 25px;
+    // @extend %centered;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 
-.heartEmpty{
-    color: $semi-dark-font-color;
-}
 
-.heartFilled{
-    transform: translateX(-50%) translateY(-50%) scale(0.0);
-    color: $clear-font-color;
-    }
+
 
 
 
@@ -185,15 +117,15 @@ p{
  .footer {
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: $semi-dark-bg-color;
     @media (min-width: 1024px) {
-        padding: 0px 80px 20px 80px ;
+        padding: 60px 50px 20px 80px ;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
     }
-    *{
+    * {
     color: $clear-font-color;
     }
     h2{
@@ -234,3 +166,4 @@ p{
         }
     }
 }
+     

@@ -1,6 +1,6 @@
 
-@import url(global_styles.css);
-
+@import "global_styles";
+  
 .fadingRestaurant{
     z-index: -2;
     position: fixed;
@@ -13,7 +13,7 @@
     animation-fill-mode: backwards; 
     animation-iteration-count: 1;
 }
-
+     
 @keyframes fadingRestaurantAnim  {
     0% { 
         background-color: rgba(255,255,255,1); 
@@ -29,7 +29,7 @@
         }
 }
 
-/**  header   **/
+/**  header   **/   
 
 .header{
 
@@ -41,7 +41,7 @@
     align-items: center;
         &__previousIcon{
         font-size: 20px;
-        color: var(--dark-font-color);
+        color: $dark-font-color;
         }
         &__logo{
             width: 160px;
@@ -70,7 +70,7 @@
         right: 0;
         border-radius: 25px 25px 0 0;
         padding: 35px 15px;
-        background-color: var(--main-bg-color);
+        background-color: $main-bg-color;
 
             &__restaurantTitle{
                 position:relative;
@@ -91,16 +91,16 @@
 
     &__dishesType {
         padding: 10px 0;
-        color: var(--semi-dark-font-color);
+        color: $semi-dark-font-color;
 
         &__h2{
             text-transform:uppercase;
             font-weight: 300;
             font-size: 16px;
             &--titleUnderline {
-            border-bottom: solid 3px var(--tertiary-color);
+            border-bottom: solid 3px $tertiary-color;
             padding: 0 0 5px 0;
-        }
+            }
         }
 
         &__dishesList{
@@ -169,7 +169,7 @@
                             height: 100%;
                             width: 65px;
                             border-radius: 0 15px 15px 0;
-                            background-color: var(--tertiary-color);
+                            background-color: $tertiary-color;
                         
                             &__checkBox{
                                 position: absolute;
@@ -206,7 +206,7 @@
     }
 }
 
-
+     
 /** animation fadding plats */
 
 article:nth-child(1){
@@ -270,7 +270,7 @@ article:nth-child(4){
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 16px;
-    color:var(--tertiary-color)
+    color:$tertiary-color;
 }
 
 
