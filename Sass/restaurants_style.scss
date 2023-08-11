@@ -285,7 +285,7 @@ article:nth-child(4){
     /**desktop: header**/
     .header{
         &__restaurantNav{
-        padding: 30px 30px 30px 30px;
+        padding: 31px;
 
             &__logo{
             width:unset;
@@ -293,7 +293,7 @@ article:nth-child(4){
         }
         &__banner{
              &__restaurantWindow{
-                height:385px;
+                height:383px;
             }
         }
     }
@@ -306,7 +306,7 @@ article:nth-child(4){
         
         &__restaurantMenu{
             margin-top:-40px;
-        padding: 60px 205px 60px 205px;
+        padding: 60px 205px 32px 205px;
         border-radius: 40px 40px 0 0; 
         
             &__restaurantTitle{                

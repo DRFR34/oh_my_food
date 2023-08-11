@@ -91,7 +91,7 @@ p {
 }
 @media (min-width: 1024px) {
   .footer {
-    padding: 60px 50px 20px 80px;
+    padding: 55px 50px 20px 80px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -762,13 +762,13 @@ article:nth-child(4) {
 @media (min-width: 1440px) {
   /**desktop: header**/
   .header__restaurantNav {
-    padding: 30px 30px 30px 30px;
+    padding: 31px;
   }
   .header__restaurantNav__logo {
     width: unset;
   }
   .header__banner__restaurantWindow {
-    height: 385px;
+    height: 383px;
   }
   /** desktop: subHeader */
   .subHeader {
@@ -777,7 +777,7 @@ article:nth-child(4) {
   }
   .subHeader__restaurantMenu {
     margin-top: -40px;
-    padding: 60px 205px 60px 205px;
+    padding: 60px 205px 32px 205px;
     border-radius: 40px 40px 0 0;
   }
   .subHeader__restaurantMenu__restaurantTitle {
