@@ -1,5 +1,5 @@
 
-@import "global_styles";
+// @import "global_styles";
   
 .fadingRestaurant{
     z-index: -2;
@@ -50,11 +50,11 @@
     }
 
     
-
-    &__banner__restaurantWindow{/** photo "vitrine"  **/
+    /** photo "vitrine"  **/
+    &__banner__restaurantWindow{
         object-fit: cover;
         width: 100%;
-        height: 200px; 
+        height: 275px; 
         }
 
 }
@@ -64,11 +64,11 @@
 .subHeader{
     position: relative;
     
-    &__restaurantMenu{/** section restaurantMenu **/
-        margin-top:-26px;
+    &__restaurantMenu{
+        margin-top:-55px;
         left: 0;
         right: 0;
-        border-radius: 25px 25px 0 0;
+        border-radius: 40px 40px 0 0;
         padding: 35px 15px;
         background-color: $main-bg-color;
 
@@ -81,7 +81,13 @@
                 &__restaurantName{
                     font-family: "Shrikhand", cursive;
                     font-weight: 100;
-                    font-size: 1.73rem;
+                    font-size: 1.73rem;                    
+                }
+
+                .heartBox{    
+                    position: relative; 
+                    right: 35px;
+                    font-size: 25px;
                 }
             }
 
@@ -158,6 +164,7 @@
                             width: 45px;
                             padding: 0 0 10px 0;
                             text-align: center;
+                            font-size: 15px;
                             font-weight: 700;
                         }
 
@@ -188,11 +195,7 @@
 
 }
 
-.heartBox{    
-    position: relative; 
-    right: 35px;
-    font-size: 25px;
-}
+
 
 /**  Commander **/
 .command{

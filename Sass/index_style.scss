@@ -1,6 +1,6 @@
 
 /*** Général ***/
-@import "global_styles", "loader_bem";
+// @import "global_styles", "loader_bem";
 
 
 /*** header ***/
@@ -94,12 +94,7 @@
         }
 }
      
-/*** positionnement des coeurs ***/
 
-.heartBox{ 
-    bottom: 40px;
-    right: 40px;
-}
 
 /*** section Fonctionnement (howTo) ***/
 
@@ -227,6 +222,11 @@
                     font-weight: 600;
                     color: $tertiary-font-color;
                 }
+                .heartBox{ 
+                    bottom: 45px;
+                    right: 40px;
+                }
+                
             }
         }
     }
