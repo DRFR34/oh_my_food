@@ -33,7 +33,7 @@ p {
 }
 
 .fa-solid, .fa-regular {
-  color: #D9D9D9;
+  color: #8c8a8a;
   font-size: 18px;
 }
 
@@ -306,7 +306,7 @@ p {
 /*** Général ***/
 /*** header ***/
 .header {
-  padding: 30px 0 0;
+  padding: 22px 0 0;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
@@ -314,29 +314,20 @@ p {
     padding: 0;
   }
 }
-.header__logoContainer {
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.233);
-}
-@media screen and (min-width: 1440px) {
-  .header__logoContainer {
-    box-shadow: none;
-  }
-}
-.header__logoContainer .logo {
+.header .logo {
   width: 160px;
   margin: auto;
   padding: 0 0 10px 0;
 }
 @media screen and (min-width: 1440px) {
-  .header__logoContainer .logo {
+  .header .logo {
     width: 200px;
     padding: 28px 0;
   }
 }
 .header__locationSearch {
-  height: 46px;
-  border-top: solid 2px;
-  border-color: #D9D9D9;
+  height: 50px;
+  box-shadow: inset 0 6px 6px -6px rgba(0, 0, 0, 0.233);
   background-color: #EAEAEA;
   display: flex;
   justify-content: center;
@@ -345,7 +336,7 @@ p {
 @media screen and (min-width: 1440px) {
   .header__locationSearch {
     height: 50px;
-    border: none;
+    box-shadow: none;
   }
 }
 .header__locationSearch__locationIconBox__locationIcon {
@@ -370,7 +361,7 @@ p {
   padding: 0 15px 0 0;
 }
 .header__hero {
-  padding: 30px 20px 60px;
+  padding: 38px 20px 55px;
   background-color: #F6F6F6;
 }
 @media screen and (min-width: 1440px) {
@@ -381,7 +372,6 @@ p {
 .header__hero h1 {
   width: 80%;
   margin: auto;
-  padding: 0 0 10px 0;
 }
 @media screen and (min-width: 1440px) {
   .header__hero h1 {
@@ -390,26 +380,36 @@ p {
 }
 .header__hero p {
   font-size: 18px;
-  padding: 20px 0;
+  padding: 12px 0 30px;
+}
+@media screen and (min-width: 1440px) {
+  .header__hero p {
+    padding: 30px 20px 30px;
+  }
 }
 
 /*** section Fonctionnement (howTo) ***/
 .howTo {
-  padding: 20px;
+  padding: 25px 20px 25px;
 }
 @media screen and (min-width: 1440px) {
   .howTo {
-    padding: 30px 200px;
+    padding: 30px 200px 35px;
   }
 }
 .howTo h2 {
   padding: 20px 0;
 }
+@media screen and (min-width: 1440px) {
+  .howTo h2 {
+    padding: 20px 0px 15px;
+  }
+}
 .howTo__list {
-  padding: 20px 0 50px;
+  padding: 15px 0 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 28px;
 }
 @media screen and (min-width: 1024px) {
   .howTo__list {
@@ -456,7 +456,7 @@ p {
   padding: 0 15px 0 0;
 }
 .howTo__list__item__content__iconBox__Icon {
-  color: #D9D9D9;
+  color: #8c8a8a;
 }
 .howTo__list__item:hover {
   transform: scaleY(1.1);
@@ -621,7 +621,7 @@ p {
   padding: 20px 0 20px 0;
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 12px;
 }
 .subHeader__dishesType__dishesList__dishCard {
   position: relative;
@@ -643,13 +643,16 @@ p {
 }
 .subHeader__dishesType__dishesList__dishCard__dishDescription {
   width: calc(100% - 55px);
-  padding: 10px 0 10px 10px;
+  padding: 9px 0 10px 10px;
 }
 .subHeader__dishesType__dishesList__dishCard__dishDescription__dishName, .subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments {
   line-height: 25px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments {
+  font-size: 15px;
 }
 .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn {
   position: absolute;
@@ -662,7 +665,7 @@ p {
 }
 .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice {
   width: 45px;
-  padding: 0 0 10px 0;
+  padding: 0 0 14px 0;
   text-align: center;
   font-size: 15px;
   font-weight: 700;
