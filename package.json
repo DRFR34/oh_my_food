@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "sass --watch Sass/styles.scss:css/styles.css"   
 },
-  
+
   "author": "",
   "license": "ISC"
 }
