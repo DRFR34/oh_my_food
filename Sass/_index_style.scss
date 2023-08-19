@@ -30,7 +30,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @media screen and (min-width: 1440px){
+        @media screen and (min-width: 1024px){
             height: 50px;
             box-shadow:none;
         }
@@ -66,13 +66,13 @@
         &__hero{
             padding: 38px 20px 55px;
             background-color: $secondary-bg-color;
-            @media screen and (min-width: 1440px){
+            @media screen and (min-width: 1024px){
                 padding: 30px 20px 30px;
             }
             h1{
                 width: 80%;
                 margin: auto;
-                @media screen and (min-width: 1440px){
+                @media screen and (min-width: 1024px){
                     font-size: 40px;
                 }
             }
@@ -80,7 +80,7 @@
             p{
                 font-size: 18px;
                 padding: 12px 0 30px;
-                @media screen and (min-width: 1440px){
+                @media screen and (min-width: 1024x){
                     padding: 30px 20px 30px;
                 }
             }
@@ -96,12 +96,22 @@
 
     .howTo{
         padding: 25px 20px 25px;
+        // box-sizing: border-box;
+        // @media screen and (min-width: 1024px){            
+        //     max-width: 1080px;
+        //     margin: auto;
+        // }
         @media screen and (min-width: 1440px){
-            padding: 30px 200px 35px;
+            width: 100%;
+            padding: 30px 180px 35px;
         }
+        
       
         h2{
             padding: 20px 0;
+            @media screen and (min-width: 768px) and (max-width: 1023px){
+                padding: 20px 20px 30px;
+            }
             @media screen and (min-width: 1440px){
                 padding: 20px 0px 15px;
             }
@@ -112,10 +122,23 @@
             display: flex;
             flex-direction: column;
             gap: 28px;
-            @media screen and (min-width: 1024px){
+            @media screen and (min-width: 768px) and (max-width: 1023px){
+                flex-direction: row;
+                justify-content: space-evenly;
+                padding: 0 ;
+                gap:0px
+            }
+            @media screen and (min-width: 1024px) and (max-width: 1439px){
+                flex-direction: row;
+                justify-content: space-evenly;
+                // justify-content: space-between;
+                padding: 0 15px;
+            }
+            
+            @media screen and (min-width: 1440px){
                 flex-direction: row;
                 justify-content: space-between;
-                padding: 15px;
+                padding: 0 15px;
             }
             
             &__item{
@@ -124,42 +147,73 @@
                 padding: 25px;
                 background-color: $secondary-bg-color;    
                 font-weight: 500;
-                @media screen and (min-width: 1024px){
-                    width: 370px;
-                    font-weight: 600;
-
-                    p{
-                        font-weight: 600;
-                    }
-                }            
+                @media screen and (min-width: 450px) and (max-width: 767px){
+                    min-width: 345px;
+                    max-width: 360px;
+                    margin: auto;
+                }
+                @media screen and (min-width: 768px) and (max-width: 1023px){
+                    padding: 20px 25px 15px 25px;
+                }
+                @media screen and (min-width: 1440px){
+                    padding: 25px 35px;
+                    width: 320px;
+                }
             
-                    &__content{ 
-                        position: relative;
-                        display: flex;
-                        align-items: center;
-                        
-                        &__number{
-                            position: absolute;
-                            left: -35px;
-                            width: 22px;
-                            height: 22px;
-                            border-radius: 50%;
-                            background-color: $primary-color;
-                            text-align: center;
-                            font-size: 12px;
-                            font-weight: 400;
-                            line-height: 22px;
-                            color: $clear-font-color;
+                &__content{ 
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    @media screen and (min-width: 768px)and (max-width: 1023px){
+                        flex-direction: column;
+                    }
+                    
+                    &__number{
+                        position: absolute;
+                        left: -35px;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        background-color: $primary-color;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        color: $clear-font-color;
+                        @media screen and (min-width: 768px) and (max-width: 1023px){
+                            top: -32px;
+                            left:calc(50% - 12px);
+                        }
+                        @media screen and (min-width: 1440px){
+                            left:-47px
+                        }
+                    }
+
+                    &__iconBox{
+                        padding: 0 15px 0 0;
+                        @media screen and (min-width: 768px) and (max-width: 1023px){
+                            padding: 0;
                         }
 
-                        &__iconBox{
-                            padding: 0 15px 0 0;
-
-                            &__Icon{
-                                color:$flat-graphics-main-color;
-                            }
+                        &__Icon{
+                            color:$flat-graphics-main-color;
                         }
-                    }   
+                    }
+
+                    // p {
+                    //     @media screen and (min-width: 768px) and (max-width: 1023px){
+                    //         background-color:red;
+                    //         // text-align: center;                            
+                    //         padding: 0;                            
+                    //     }
+                    //     @media screen and (min-width: 1024px){
+                    //         font-weight: 500;        
+                    //     }  
+                    //     @media screen and (min-width: 1440px){
+                                    
+                    //     } 
+                    // }
+                }   
             }
 
             &__item:hover{
@@ -175,16 +229,20 @@
 
     .restaurants{
         padding: 54px 20px 47px;
-        background-color:$secondary-bg-color;
+        background-color:$secondary-bg-color;        
         @media screen and (min-width: 1440px){
             padding: 30px 180px 0;
-        }
-        
+        }        
         &__cardsList{
         padding: 20px 0;
         display: grid;
         grid-template-columns: 1fr;
         gap: 18px;
+        @media screen and (min-width: 768px){
+            padding:30px 0;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
         @media screen and (min-width: 1440px){
             padding:30px 0;
             grid-template-columns: 1fr 1fr;

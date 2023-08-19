@@ -17,13 +17,13 @@
 }
 
 
-
 /*** Eléments généraux***/
 
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -63,10 +63,10 @@ p{
     border: none;
     box-shadow: 0px 0px 10px 0px  rgba(252, 252, 252, 0.24);
     border-radius: 50px;
-    padding: 15px;
+    padding: 15px 25px;
     background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100% );
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     color: $clear-font-color;
 
     &:hover{
@@ -142,13 +142,23 @@ p{
     font-family: 'Shrikhand', cursive;
     font-size: 18px;
     font-weight: 400;
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
+        padding: 0 0 20px;
+        text-align: center;
+    }
+    @media (min-width: 1024px) {        
         padding: 0 0 10px 100px;
     }
     }
     &__box{
         display: flex;
         flex-direction: column;
+        @media (min-width: 768px) and (max-width: 1023px)  {
+            display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                padding: 0 0 20px 0;
+        }
         @media (min-width: 1024px) {
             display: flex;
                 flex-direction: row;
