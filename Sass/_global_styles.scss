@@ -3,21 +3,20 @@
 **==================================================*/
 
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap")
-,
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"),
 "variables";
 
-//  Mixins
+//  ** Mixins
 
 @mixin flexCentered {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
 
 
-/*** Eléments généraux***/
+// ** Eléments généraux
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -26,158 +25,152 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     max-width: 1440px;
     margin: auto;
 }
 
-  
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
     color: $dark-font-color;
 }
 
-p{
+p {
     font-weight: 400;
     font-size: 16px;
 }
 
-.fa-solid, .fa-regular{
+.fa-solid,
+.fa-regular {
     color: $flat-graphics-main-color;
     font-size: 18px;
 }
 
-.boxShadow{
+.boxShadow {
     box-shadow: 3px 3px 11px 2px rgba(33, 33, 33, 0.150);
-    
-    &:hover{
-    box-shadow: 3px 3px 15px 2px rgba(33, 33, 33, 0.300);
+
+    &:hover {
+        box-shadow: 3px 3px 15px 2px rgba(33, 33, 33, 0.300);
     }
 }
 
+// ** Boutons dégradés 
 
-
-/****** Boutons principaux  ******/
-
-.mainBtn{
+.mainBtn {
     border: none;
-    box-shadow: 0px 0px 10px 0px  rgba(252, 252, 252, 0.24);
+    box-shadow: 0px 0px 10px 0px rgba(252, 252, 252, 0.24);
     border-radius: 50px;
     padding: 15px 25px;
-    background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100% );
+    background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
     font-size: 16px;
     font-weight: 400;
     color: $clear-font-color;
 
-    &:hover{
+    &:hover {
         transition: .3s;
-        filter:brightness(1.13);
+        filter: brightness(1.13);
         box-shadow: 0px 0px 10px 0px rgba(33, 33, 33, 0.287);
     }
-
 }
 
+// ** Coeurs
 
-/****** Coeurs ******/
+.heartBox {
+    position: absolute;
 
-.heartBox{    
-    position: absolute; 
+    .heartEmpty,
+    .heartFilled {
+        font-size: 25px;
+        @include flexCentered;
+    }
 
-    .heartEmpty{
+    .heartEmpty {
         color: $semi-dark-font-color;
     }
 
-    .heartFilled{
-    transform: translateX(-50%) translateY(-50%) scale(0.0);
+    .heartFilled {
+        transform: translateX(-50%) translateY(-50%) scale(0.0);
     }
 
-       
-
-    &:hover{ 
+    &:hover {
         .heartFilled {
-        z-index: 2;
-        transform: translateX(-50%) translateY(-50%) scale(1);
-        transition: 0.3s;
-        background: -webkit-linear-gradient(0deg, $secondary-color 0%, $primary-color 100% );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-
+            z-index: 2;
+            transform: translateX(-50%) translateY(-50%) scale(1);
+            transition: 0.3s;
+            background: -webkit-linear-gradient(0deg, $secondary-color 0%, $primary-color 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 }
 
-.heartEmpty, .heartFilled{
-    font-size: 25px;
-    @include flexCentered;
-}
-
-
-
-
-
-
-
-
-
 /******* footer ******/
 
-
- .footer {
+.footer {
     display: flex;
     flex-direction: column;
     padding: 12px 20px;
     background-color: $semi-dark-bg-color;
+
     @media (min-width: 1024px) {
-        padding: 55px 50px 20px 80px ;
+        padding: 55px 50px 20px 80px;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
     }
+
     * {
-    color: $clear-font-color;
+        color: $clear-font-color;
     }
-    h2{
-    padding: 12px 0;
-    font-family: 'Shrikhand', cursive;
-    font-size: 18px;
-    font-weight: 400;
-    @media (min-width: 768px) and (max-width: 1023px) {
-        padding: 0 0 20px;
-        text-align: center;
+
+    h2 {
+        padding: 12px 0;
+        font-family: 'Shrikhand', cursive;
+        font-size: 18px;
+        font-weight: 400;
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            padding: 0 0 20px;
+            text-align: center;
+        }
+
+        @media (min-width: 1024px) {
+            padding: 0 0 10px 100px;
+        }
     }
-    @media (min-width: 1024px) {        
-        padding: 0 0 10px 100px;
-    }
-    }
-    &__box{
+
+    &__box {
         display: flex;
         flex-direction: column;
-        @media (min-width: 768px) and (max-width: 1023px)  {
+
+        @media (min-width: 768px) and (max-width: 1023px) {
             display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                padding: 0 0 20px 0;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 0 0 20px 0;
         }
+
         @media (min-width: 1024px) {
             display: flex;
-                flex-direction: row;
+            flex-direction: row;
         }
-    
-        &__item{
-            display:flex;
+
+        &__item {
+            display: flex;
             align-items: center;
             padding: 2px 1px;
+
             @media (min-width: 1024px) {
                 padding: 2px 15px;
                 color: $clear-font-color;
                 font-weight: 400;
             }
 
-            &__iconBox{
+            &__iconBox {
                 padding: 0 10px 0 0;
 
-                &__icon{ 
+                &__icon {
                     color: $clear-font-color;
                     font-size: 15px;
                 }
@@ -185,4 +178,3 @@ p{
         }
     }
 }
-     

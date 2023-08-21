@@ -1,7 +1,3 @@
-
-// @import "global_styles";
-
-
 /****** loader ******/    
 
 .loaderBg{
@@ -18,7 +14,6 @@
     &__animContainer{
 
         position: absolute;
-        // top: 30%;
         top: 15%;
         left:50%;
         width: 320px;
@@ -66,126 +61,98 @@
             animation-fill-mode: forwards;
         }
 
-        &__plat, &__couvercle{
+        &__coveredTrayBox {
             position: absolute;
-            top:50%;
-            left: 50%;
-            /* background-color: red; */
-            z-index: 5;
-            opacity: 1;
+            top: 110px;
+            left: 30%;
+            background-color: transparent;
+            z-index: 15;
             width: 350px;
-        }
-        
-        &__plat{
-            width: 350px;
-            transform: translate(-50%, 190px);
-            animation: loaderAnimPlat 2.8s ease-out;
-            animation-fill-mode: forwards;
+            transform: scale(1.4);
+
+            *{
+                background-color: $clear-font-color;
+                border:solid 4px rgb(179, 179, 179);                
+            }
+
+            &__cover { 
+            top: 100px;
+            left: 19%; 
+            width: -moz-fit-content; 
+            width: fit-content;  
+            border: none; 
+            background-color:transparent;
+            display: flex;
             
-        }
+            flex-direction: column;
+            align-items: center;
+            animation: loaderAnimCover 3.1s linear 0s 1  forwards;
+
+                &__handle {
+                    position:absolute;
+                    top: -17px;
+                    height: 20px;
+                    width: 40px;
+                    border-radius: 15px 15px 30px 30px;
+                }
+
+                &__shield {
+                    height: 100px;
+                    width: 200px;
+                    border-radius: 100px 100px 0 0;
+                }
+            }
         
-        &__couvercle{
-            width: 400px;
-            transform:  translate(-50%, 0px);
-            animation: loaderAnimCouvercle 3s ease-out;
-            animation-fill-mode: forwards;
+
+            &__tray {
+                width: 210px;
+                height: 10px;
+                border-radius: 5px;
+                animation: loaderAnimPlateandWaiter 2.8s ease-out;
+                animation-fill-mode: forwards;
+
+            }
+
+            &__waiter {
+                border: none;
+                background-color:transparent;
+                animation: loaderAnimPlateandWaiter 2.8s ease-out;
+                animation-fill-mode: forwards;
+
+                &__fingers {
+                    width: 50px;
+                    height: 12px;
+                    border-radius: 5px 8px 0px 5px;
+                    transform: translate(102px, 0px);
+                }
+                
+                &__palm{
+                    width: 50px;
+                    height: 25px;
+                    border-radius: 15px 0 25px;
+                    transform: translate(60px, -15px);
+                }
+                
+                &__thumb{
+                    width: 40px;
+                    height: 15px;
+                    border-left: 0px;
+                    border-radius: 0px 15px 0 5px;
+                    transform: translate(80px, -38px);
+                }
+                
+                &__cuff{
+                    width: 25px;
+                    height: 30px;
+                    border-radius: 5px 15px 0 5px;
+                    transform: translate(40px, -52px) ;
+                }
+                &__towel{
+                    width: 50px;
+                    height: 80px;
+                    transform: translate(0px, -83px) ;
+                }
+            }
         }
     }
 }
-     
-/**  Keyframes **/
-
-// @keyframes loaderRestaurantAnim  {
-//     0% { 
-//         z-index: 10;
-//         background-color: rgba(255,255,255,1); 
-        
-//         }
-//     70.999% {
-//         background-color: rgba(255,255,255,.8);
-//         z-index: 10;
-//         }
-
-//     99.999% {
-//     background-color: rgba(255,255,255,.7);
-//     z-index: 10;
-//     } 
-//     100% { 
-//     background-color: rgba(255,255,255,0);
-//     z-index: -2;
-//     }
-// }
-
-// @keyframes move1 {
-//     0%{
-//         transform: translate(400px, 0px);
-//         opacity: 1;
-//     }
-
-//     50%{ transform: translate(0px, 0px);   }
-
-//     99%{
-        
-//     transform: translate(0px, 0px); 
-//     opacity: 1;
-//   } 
-
-//     100%{
-       
-//         transform: translate(0px, 0px);  
-//         opacity: 0;
-//         z-index: -2;
-        
-//     }
-// }
-
-// @keyframes jumps {
-//     0%{top:136px}
-    
-//     100% {
-//         top:135px}
-//   }
-
-// @keyframes animCouvercle {
-//     25% {
-//       transform:  translate(-70%, -165px) rotate(-35deg);
-//       opacity: 1;
-//       z-index: 10;
-//     }
-//     50.9% {
-//       transform:  translate(-70%, -165px) rotate(-35deg);
-//       z-index: 10;
-//       opacity: 1;
-//     }
-//     80% {
-//       transform:   translate(-50%, 0px) rotate(0deg);
-//         opacity: 1;
-//         z-index: 10;
-//     }
-//     99.99% {
-//         transform:  translate(-50%, 0px) rotate(0deg);
-//         z-index: 10;
-//         /* opacity: 0.5; */
-//       }
-
-//     100% {
-//       transform: translate(-50%, 0px) rotate(0deg);
-//       opacity: 0;
-//       z-index: -2;
-//     }
-//   }
-
-// @keyframes animPlat{
-        
-//     99.99%{
-//         /* transform: translate(-50%, 140%); */
-//         opacity: 1; 
-//     }
-    
-//     100%{
-//         /* transform: translate(-50%, 140%); */
-//         opacity: 0;
-//         z-index: -2;
-
-//     }
-// }

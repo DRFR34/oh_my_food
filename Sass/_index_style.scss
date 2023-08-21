@@ -1,294 +1,286 @@
-
-/*** Général ***/
-// @import "global_styles", "loader_bem";
-
-
 /*** header ***/
 
-.header{
+.header {
     padding: 22px 0 0;
     text-align: center;
-    @media screen and (min-width: 1440px){
-        padding:0;
+
+    @media screen and (min-width: 1440px) {
+        padding: 0;
     }
 
-        .logo{
-            width: 160px;
-            margin:auto;  
-            padding: 0 0 10px 0; 
-            @media screen and (min-width: 1440px){
-                width: 200px;
-                padding: 28px 0;
-            } 
+    .logo {
+        width: 160px;
+        margin: auto;
+        padding: 0 0 10px 0;
+
+        @media screen and (min-width: 1440px) {
+            width: 200px;
+            padding: 28px 0;
         }
-        
-        
-    &__locationSearch{
+    }
+
+    &__locationSearch {
         height: 50px;
         box-shadow: inset 0 6px 6px -6px rgba(0, 0, 0, 0.233);
         background-color: $fields-bg-color;
         display: flex;
         justify-content: center;
         align-items: center;
-        @media screen and (min-width: 1024px){
+
+        @media screen and (min-width: 1024px) {
             height: 50px;
-            box-shadow:none;
+            box-shadow: none;
         }
 
-        &__locationIconBox__locationIcon{
+        &__locationIconBox__locationIcon {
             color: $dark-font-color;
         }
 
-        &__searchField{
-            
+        &__searchField {
+
             width: 135px;
             border-style: none;
             background-color: transparent;
             font-size: 16px;
             color: black;
-            font-weight: 600; 
-            
-            &:focus{
-            outline:none;
-            background-color:$clear-font-color;                      
+            font-weight: 600;
+
+            &:focus {
+                outline: none;
+                background-color: $clear-font-color;
             }
-            &:focus::placeholder{
-                color:transparent;
-            } 
-        } 
-        
-        &__locationIconBox{
-            padding: 0 15px 0 0;                
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+
+        &__locationIconBox {
+            padding: 0 15px 0 0;
         }
     }
-    
 
-        &__hero{
-            padding: 38px 20px 55px;
-            background-color: $secondary-bg-color;
-            @media screen and (min-width: 1024px){
+    &__hero {
+        padding: 38px 20px 55px;
+        background-color: $secondary-bg-color;
+
+        @media screen and (min-width: 1024px) {
+            padding: 30px 20px 30px;
+        }
+
+        h1 {
+            width: 80%;
+            margin: auto;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 40px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            padding: 12px 0 30px;
+
+            @media screen and (min-width: 1024px) {
                 padding: 30px 20px 30px;
             }
-            h1{
-                width: 80%;
-                margin: auto;
-                @media screen and (min-width: 1024px){
-                    font-size: 40px;
-                }
-            }
-
-            p{
-                font-size: 18px;
-                padding: 12px 0 30px;
-                @media screen and (min-width: 1024x){
-                    padding: 30px 20px 30px;
-                }
-            }
-
-
         }
-}
-     
 
+
+    }
+}
 
 /*** section Fonctionnement (howTo) ***/
 
-
-    .howTo{
-        padding: 25px 20px 25px;
-        // box-sizing: border-box;
-        // @media screen and (min-width: 1024px){            
-        //     max-width: 1080px;
-        //     margin: auto;
-        // }
-        @media screen and (min-width: 1440px){
-            width: 100%;
-            padding: 30px 180px 35px;
-        }
-        
-      
-        h2{
-            padding: 20px 0;
-            @media screen and (min-width: 768px) and (max-width: 1023px){
-                padding: 20px 20px 30px;
-            }
-            @media screen and (min-width: 1440px){
-                padding: 20px 0px 15px;
-            }
-        }
-
-        &__list{
-            padding: 15px 0 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-            @media screen and (min-width: 768px) and (max-width: 1023px){
-                flex-direction: row;
-                justify-content: space-evenly;
-                padding: 0 ;
-                gap:0px
-            }
-            @media screen and (min-width: 1024px) and (max-width: 1439px){
-                flex-direction: row;
-                justify-content: space-evenly;
-                // justify-content: space-between;
-                padding: 0 15px;
-            }
-            
-            @media screen and (min-width: 1440px){
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 0 15px;
-            }
-            
-            &__item{
-                list-style-type: none;
-                border-radius: 20px;
-                padding: 25px;
-                background-color: $secondary-bg-color;    
-                font-weight: 500;
-                @media screen and (min-width: 450px) and (max-width: 767px){
-                    min-width: 345px;
-                    max-width: 360px;
-                    margin: auto;
-                }
-                @media screen and (min-width: 768px) and (max-width: 1023px){
-                    padding: 20px 25px 15px 25px;
-                }
-                @media screen and (min-width: 1440px){
-                    padding: 25px 35px;
-                    width: 320px;
-                }
-            
-                &__content{ 
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    @media screen and (min-width: 768px)and (max-width: 1023px){
-                        flex-direction: column;
-                    }
-                    
-                    &__number{
-                        position: absolute;
-                        left: -35px;
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 50%;
-                        background-color: $primary-color;
-                        text-align: center;
-                        font-size: 12px;
-                        font-weight: 400;
-                        line-height: 24px;
-                        color: $clear-font-color;
-                        @media screen and (min-width: 768px) and (max-width: 1023px){
-                            top: -32px;
-                            left:calc(50% - 12px);
-                        }
-                        @media screen and (min-width: 1440px){
-                            left:-47px
-                        }
-                    }
-
-                    &__iconBox{
-                        padding: 0 15px 0 0;
-                        @media screen and (min-width: 768px) and (max-width: 1023px){
-                            padding: 0;
-                        }
-
-                        &__Icon{
-                            color:$flat-graphics-main-color;
-                        }
-                    }
-
-                    // p {
-                    //     @media screen and (min-width: 768px) and (max-width: 1023px){
-                    //         background-color:red;
-                    //         // text-align: center;                            
-                    //         padding: 0;                            
-                    //     }
-                    //     @media screen and (min-width: 1024px){
-                    //         font-weight: 500;        
-                    //     }  
-                    //     @media screen and (min-width: 1440px){
-                                    
-                    //     } 
-                    // }
-                }   
-            }
-
-            &__item:hover{
-                transform: scaleY(1.1);
-                i{
-                    color: $primary-color;
-                }
-            }
-        }        
+.howTo {
+    padding: 25px 20px 25px;
+    @media screen and (min-width: 1440px) {
+        width: 100%;
+        padding: 30px 180px 35px;
     }
 
-    /*** section Restaurants ***/
+    h2 {
+        padding: 20px 0;
 
-    .restaurants{
-        padding: 54px 20px 47px;
-        background-color:$secondary-bg-color;        
-        @media screen and (min-width: 1440px){
-            padding: 30px 180px 0;
-        }        
-        &__cardsList{
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            padding: 20px 20px 30px;
+        }
+
+        @media screen and (min-width: 1440px) {
+            padding: 20px 0px 15px;
+        }
+    }
+
+    &__list {
+        padding: 15px 0 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 0;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1439px) {
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 0 15px;
+        }
+
+        @media screen and (min-width: 1440px) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+        &__item {
+            list-style-type: none;
+            border-radius: 20px;
+            padding: 25px;
+            background-color: $secondary-bg-color;
+            font-weight: 500;
+
+            @media screen and (min-width: 450px) and (max-width: 767px) {
+                min-width: 345px;
+                max-width: 360px;
+                margin: auto;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+                padding: 20px 25px 15px 25px;
+            }
+
+            @media screen and (min-width: 1440px) {
+                padding: 25px 35px;
+                width: 320px;
+            }
+
+            &__content {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                @media screen and (min-width: 768px)and (max-width: 1023px) {
+                    flex-direction: column;
+                }
+
+                &__number {
+                    position: absolute;
+                    left: -35px;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: $clear-font-color;
+
+                    @media screen and (min-width: 768px) and (max-width: 1023px) {
+                        top: -32px;
+                        left: calc(50% - 12px);
+                    }
+
+                    @media screen and (min-width: 1440px) {
+                        left: -47px
+                    }
+                }
+
+                &__iconBox {
+                    padding: 0 15px 0 0;
+
+                    @media screen and (min-width: 768px) and (max-width: 1023px) {
+                        padding: 0;
+                    }
+
+                    &__Icon {
+                        color: $flat-graphics-main-color;
+                    }
+                }
+            }
+        }
+
+        &__item:hover {
+            transform: scaleY(1.1);
+
+            i {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+/*** section Restaurants ***/
+
+.restaurants {
+    padding: 54px 20px 47px;
+    background-color: $secondary-bg-color;
+
+    @media screen and (min-width: 1440px) {
+        padding: 30px 180px 0;
+    }
+
+    &__cardsList {
         padding: 20px 0;
         display: grid;
         grid-template-columns: 1fr;
         gap: 18px;
-        @media screen and (min-width: 768px){
-            padding:30px 0;
+
+        @media screen and (min-width: 768px) {
+            padding: 30px 0;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
-        @media screen and (min-width: 1440px){
-            padding:30px 0;
+
+        @media screen and (min-width: 1440px) {
+            padding: 30px 0;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
         }
 
-            &__card{
-                position:relative;
-                background-color: $clear-font-color;
-                border-radius: 10px;
-                @media screen and (min-width: 1440px){
-                    width: 490px;
-                }
+        &__card {
+            position: relative;
+            background-color: $clear-font-color;
+            border-radius: 10px;
 
-                &__link__window{
-                    border-radius: 10px 10px 0 0 ;
-                    width:100%;
-                    height:172px;
-                    object-fit: cover;
-                }
-                &__link__text{
-                    padding: 12px 12px;
-                    line-height: 25px;
-                }
-                &__link__newLabel{
-                    position: absolute;    
-                    top: 15px;
-                    right: 20px;
-                    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-                    border-radius: 2px;
-
-                    padding: 6px 12px;
-                    background-color: $tertiary-color;
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: $tertiary-font-color;
-                }
-                .heartBox{ 
-                    bottom: 45px;
-                    right: 40px;
-                }
-                
+            @media screen and (min-width: 1440px) {
+                width: 490px;
             }
+
+            &__link__window {
+                border-radius: 10px 10px 0 0;
+                width: 100%;
+                height: 172px;
+                object-fit: cover;
+            }
+
+            &__link__text {
+                padding: 12px 12px;
+                line-height: 25px;
+            }
+
+            &__link__newLabel {
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+                border-radius: 2px;
+
+                padding: 6px 12px;
+                background-color: $tertiary-color;
+                font-size: 14px;
+                font-weight: 500;
+                color: $tertiary-font-color;
+            }
+
+            .heartBox {
+                bottom: 45px;
+                right: 40px;
+            }
+
         }
     }
-
-
-
-
+}

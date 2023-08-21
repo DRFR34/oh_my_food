@@ -51,54 +51,53 @@
         top:135px}
   }
 
-@keyframes loaderAnimCouvercle {
-    25% {
-      transform:  translate(-70%, -165px) rotate(-35deg);
-      opacity: 1;
-      z-index: 10;
-    }
-    50.9% {
-      transform:  translate(-70%, -165px) rotate(-35deg);
-      z-index: 10;
-      opacity: 1;
-    }
-    80% {
-      transform:   translate(-50%, 0px) rotate(0deg);
+@keyframes loaderAnimCover {
+    5% {
+        transform: translate(-65px,-70px) rotate(-45deg);  
         opacity: 1;
-        z-index: 10;
+        z-index: 10;                      
     }
-    99.99% {
-        transform:  translate(-50%, 0px) rotate(0deg);
-        z-index: 10;
-        /* opacity: 0.5; */
-      }
-
+    70% {
+        transform: translate(-65px,-70px) rotate(-45deg);
+        opacity: 1;
+        z-index: 10;                        
+    }
+    75% {
+        transform: translate(0px, 0px) rotate(-0deg); 
+        opacity: 1;
+        z-index: 10;                       
+    }
+    99.9% {
+        transform: translate(0px, 0px) rotate(0deg);   
+        opacity: 0;
+        z-index: 10;                     
+    }
     100% {
-      transform: translate(-50%, 0px) rotate(0deg);
-      opacity: 0;
-      z-index: -2;
+        transform: translate(0px, 0px) rotate(0deg);                        
+        opacity: 0;
+        z-index: -2;
     }
-  }
+}
 
-@keyframes loaderAnimPlat{
+@keyframes loaderAnimPlateandWaiter{
         
-    99.99%{
-        /* transform: translate(-50%, 140%); */
+    96%{
+        opacity: 1; 
+    }
+    97%{
         opacity: 1; 
     }
     
     100%{
-        /* transform: translate(-50%, 140%); */
         opacity: 0;
         z-index: -2;
 
     }
 }
 
-
 // *** keyframes pages restaurants
 
-// * animation ouverture de page
+// ** ouverture de page
 
 // animation d'estompage de la page 
 @keyframes restaurantAnim-fading  {
@@ -132,7 +131,7 @@
      }
  }
 
- // animation de reduction des description de plats
+ // ** reduction des description de plats
  @keyframes retaurantAnim-DishDescription {
     from{
         width: calc(100% - 55px);
@@ -142,7 +141,7 @@
     } 
 }
 
-// animation de translation prix et check-box
+// ** translation prix et check-box
 @keyframes restaurantAnim-priceAndCheckBtn {
     100%{ transform: translateX(-65px); }
 }
