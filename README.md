@@ -5,5 +5,6 @@ Une  version "plus" a également été développée, simulant davantage une exp�
 Lien Git-pages :
 https://drfr34.github.io/ohmyfood_plus/
 
+Avec mes remerciements à Mr Emeric Tourel, mon mentor OpenClassrooms, pour son aide et son soutien lors de la réalisation de ce projet.
 
 
